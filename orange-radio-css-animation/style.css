@@ -1,0 +1,33 @@
+#favoris:hover{
+-webkit-animation : my-anim 2s ease-in-out infinite;
+-moz-animation : my-anim 2s ease-in-out infinite;
+-ms-animation : my-anim 2s ease-in-out infinite;
+-o-animation : my-anim 2s ease-in-out infinite;
+animation : my-anim 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes my-anim{
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-moz-keyframes my-anim{
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-ms-keyframes my-anim{
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-o-keyframes my-anim{
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes my-anim{
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}

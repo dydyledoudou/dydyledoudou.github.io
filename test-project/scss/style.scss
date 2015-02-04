@@ -1,0 +1,65 @@
+@import 'bourbon';
+
+$dark-grey: #444444;
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  p {
+    color: #666666;
+    font-size: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: justify;
+  }
+  p:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.player-container {
+  display: block;
+  width: 1280px;
+  height: 720px;
+  @include background(radial-gradient(rgba(white, 0.9), rgba(white, 0.3)) left repeat, url('../img/bg.png'));
+
+  border: 1px solid black;
+}
+
+.content-container {
+  display: block;
+  position: absolute;
+
+  left: 670px;
+  top: 140px;
+
+  width: 450px;
+  height: 350px;
+
+
+  h1 {
+    font-weight: normal;
+    font-size: 28px;
+    color: $dark-grey;
+    margin: 0;
+  }
+
+  p {
+    text-transform: lowercase;
+  }
+
+}
+
+
+
+.logo-container {
+  display: block;
+  position: absolute;
+
+  left: 245px;
+  top: 140px;
+
+  width: 350px;
+  height: 350px;
+  background: white;
+  border: 2px solid $dark-grey;
+}
