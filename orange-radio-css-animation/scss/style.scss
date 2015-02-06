@@ -1,0 +1,94 @@
+@import 'bourbon';
+
+$wsize : 350px;
+$hsize : 350px;
+
+#favoris:hover{
+  @include animation(my-anim 2s ease-in-out infinite);
+}
+@include keyframes(my-anim) {
+  0%{opacity : 1;}
+  50%{opacity : 0;}
+  100%{opacity: 1;}
+}
+
+#square-container{
+  width: 1050px;
+  height: 350px;
+  background-color: #cccccc;
+  overflow: hidden;
+
+  #red-square{
+    background-color: red;
+    left: 150px;
+    position: relative;
+
+    &.move1{
+      left: -350px;
+      @include animation(red-anim 2s ease-in-out);
+    }
+  }
+  #green-square{
+    background-color: green;
+    left: 700px;
+    position: relative;
+
+    &.move2{
+      @include animation(green-anim 6s ease-in-out);
+      left: -700px;
+    }
+  }
+  #blue-square{
+    background-color: blue;
+    left: 350px;
+    position: relative;
+
+    &.move4{
+      @include animation(blue-anim 8s ease-in-out);
+      left: -1150px;
+    }
+  }
+
+}
+
+#red-square, #green-square, #blue-square{
+  width: $wsize;
+  height: $hsize;
+  float: left;
+}
+
+@include keyframes(red-anim) {
+  0% {left: 150px;}
+  100% {left: -350px;}
+}
+
+@include keyframes(green-anim) {
+  0% {left: 700px;}
+  12% {left: 700px;}
+  50% {left: -200px;}
+  75% {left: -200px;}
+  100% {left: -700px;}
+}
+
+@include keyframes(blue-anim) {
+  0% {left: 350px;}
+  50% {left: 350px;}
+  71% {left: -500px;}
+  85% {left: -500px;}
+  100% {left: -1150px;}
+}
+
+#parent {
+  position: relative;
+  display: block;
+  height: 300px;
+  background: grey;
+}
+
+#child1, #child2 {
+  display: block;
+  width: 50%;
+  float: left;
+  border: 5px solid red;
+  @include box-sizing(border-box);
+}

@@ -3,11 +3,38 @@
   <meta charset="utf-8">
   <title>Animation et CSS</title>
   <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 <div>
   <p>Hover sur l'image pour déclencher l'animation</p>
   <img src="img/indicator.png" id="favoris">
 </div>
+<div>
+  <a href="#" id="start-anim">Clic dans la zone grise pour animer</a>
+  <div id="square-container">
+    <div id="red-square"></div>
+    <div id="green-square"></div>
+    <div id="blue-square"></div>
+  </div>
+</div>
+
+<div id="parent">
+  <div id="child1">
+    test
+  </div>
+  <div id="child2">
+    test
+  </div>
+</div>
+
+<script type="text/javascript">
+ $('#start-anim').click(function() {
+  $('#red-square').addClass("move1");
+  $('#green-square').addClass("move2");
+  $('#blue-square').addClass("move4");
+  console.log('toto');
+ });
+</script>
 </body>
 </html>

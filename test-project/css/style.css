@@ -2,7 +2,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif; }
   body p {
     color: #666666;
-    font-size: 20px;
+    font-size: 24px;
     word-break: break-all;
     word-wrap: break-word;
     text-align: justify; }
@@ -26,7 +26,7 @@ body {
   height: 350px; }
   .content-container h1 {
     font-weight: normal;
-    font-size: 28px;
+    font-size: 32px;
     color: #444444;
     margin: 0; }
   .content-container p {
