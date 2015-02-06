@@ -1,0 +1,33 @@
+#player {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  background: #EFEFEF; }
+
+.box {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  -webkit-transition: all 2s ease-in-out 2s;
+  -moz-transition: all 2s ease-in-out 2s;
+  transition: all 2s ease-in-out 2s;
+  left: 100%;
+  opacity: 0; }
+
+#red {
+  background: red; }
+
+#green {
+  background: green; }
+
+#blue {
+  background: blue; }
+
+.slide-in {
+  left: 30%;
+  opacity: 1; }
+
+.slide-out {
+  left: calc(0% - 350px);
+  opacity: 0; }

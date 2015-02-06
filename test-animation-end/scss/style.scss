@@ -1,0 +1,46 @@
+@import 'bourbon';
+
+$box-dimension: 350px;
+
+#player {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: $box-dimension;
+
+  background: #EFEFEF;
+}
+
+.box {
+  position: absolute;
+  width: $box-dimension;
+  height: $box-dimension;
+
+  @include transition(all 2.0s ease-in-out 2.0s);
+
+  left: 100%;
+  opacity: 0;
+}
+
+#red {
+  background: red;
+}
+
+#green {
+  background: green;
+}
+
+#blue {
+  background: blue;
+}
+
+.slide-in {
+  left: 30%;
+  opacity: 1;
+}
+
+.slide-out {
+  left: calc(0% - 350px);
+  opacity: 0;
+}
