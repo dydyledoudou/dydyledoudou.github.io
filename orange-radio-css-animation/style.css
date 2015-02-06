@@ -43,211 +43,80 @@
   100% {
     opacity: 1; } }
 
+/**   Seconde version du CSS   **/
 #square-container {
   width: 1050px;
   height: 350px;
   background-color: #cccccc;
-  overflow: hidden; }
-  #square-container #red-square {
-    background-color: red;
-    left: 150px;
-    position: relative; }
-    #square-container #red-square.move1 {
-      left: -350px;
-      -webkit-animation: red-anim 2s ease-in-out;
-      -moz-animation: red-anim 2s ease-in-out;
-      animation: red-anim 2s ease-in-out; }
-  #square-container #green-square {
-    background-color: green;
-    left: 700px;
-    position: relative; }
-    #square-container #green-square.move2 {
-      -webkit-animation: green-anim 6s ease-in-out;
-      -moz-animation: green-anim 6s ease-in-out;
-      animation: green-anim 6s ease-in-out;
-      left: -700px; }
-  #square-container #blue-square {
-    background-color: blue;
-    left: 350px;
-    position: relative; }
-    #square-container #blue-square.move4 {
-      -webkit-animation: blue-anim 8s ease-in-out;
-      -moz-animation: blue-anim 8s ease-in-out;
-      animation: blue-anim 8s ease-in-out;
-      left: -1150px; }
+  overflow: hidden;
+  position: relative; }
+  #square-container .box {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 1050px; }
+    #square-container .box.move {
+      -webkit-animation: my-anim 3s ease-in-out;
+      -moz-animation: my-anim 3s ease-in-out;
+      animation: my-anim 3s ease-in-out; }
 
-#red-square, #green-square, #blue-square {
-  width: 350px;
-  height: 350px;
-  float: left; }
+#red {
+  background-color: red; }
 
-@-webkit-keyframes red-anim {
+#green {
+  background-color: green; }
+
+#blue {
+  background-color: blue; }
+
+@-webkit-keyframes my-anim {
   0% {
+    left: 1050px; }
+
+  50% {
+    left: 150px; }
+
+  75% {
     left: 150px; }
 
   100% {
-    left: -350px; } }
+    left: calc(0% - 350px); } }
 
-@-moz-keyframes red-anim {
+@-moz-keyframes my-anim {
   0% {
+    left: 1050px; }
+
+  50% {
+    left: 150px; }
+
+  75% {
     left: 150px; }
 
   100% {
-    left: -350px; } }
+    left: calc(0% - 350px); } }
 
-@-o-keyframes red-anim {
+@-o-keyframes my-anim {
   0% {
+    left: 1050px; }
+
+  50% {
+    left: 150px; }
+
+  75% {
     left: 150px; }
 
   100% {
-    left: -350px; } }
+    left: calc(0% - 350px); } }
 
-@keyframes red-anim {
+@keyframes my-anim {
   0% {
+    left: 1050px; }
+
+  50% {
+    left: 150px; }
+
+  75% {
     left: 150px; }
 
   100% {
-    left: -350px; } }
-
-@-webkit-keyframes green-anim {
-  0% {
-    left: 700px; }
-
-  12% {
-    left: 700px; }
-
-  50% {
-    left: -200px; }
-
-  75% {
-    left: -200px; }
-
-  100% {
-    left: -700px; } }
-
-@-moz-keyframes green-anim {
-  0% {
-    left: 700px; }
-
-  12% {
-    left: 700px; }
-
-  50% {
-    left: -200px; }
-
-  75% {
-    left: -200px; }
-
-  100% {
-    left: -700px; } }
-
-@-o-keyframes green-anim {
-  0% {
-    left: 700px; }
-
-  12% {
-    left: 700px; }
-
-  50% {
-    left: -200px; }
-
-  75% {
-    left: -200px; }
-
-  100% {
-    left: -700px; } }
-
-@keyframes green-anim {
-  0% {
-    left: 700px; }
-
-  12% {
-    left: 700px; }
-
-  50% {
-    left: -200px; }
-
-  75% {
-    left: -200px; }
-
-  100% {
-    left: -700px; } }
-
-@-webkit-keyframes blue-anim {
-  0% {
-    left: 350px; }
-
-  50% {
-    left: 350px; }
-
-  71% {
-    left: -500px; }
-
-  85% {
-    left: -500px; }
-
-  100% {
-    left: -1150px; } }
-
-@-moz-keyframes blue-anim {
-  0% {
-    left: 350px; }
-
-  50% {
-    left: 350px; }
-
-  71% {
-    left: -500px; }
-
-  85% {
-    left: -500px; }
-
-  100% {
-    left: -1150px; } }
-
-@-o-keyframes blue-anim {
-  0% {
-    left: 350px; }
-
-  50% {
-    left: 350px; }
-
-  71% {
-    left: -500px; }
-
-  85% {
-    left: -500px; }
-
-  100% {
-    left: -1150px; } }
-
-@keyframes blue-anim {
-  0% {
-    left: 350px; }
-
-  50% {
-    left: 350px; }
-
-  71% {
-    left: -500px; }
-
-  85% {
-    left: -500px; }
-
-  100% {
-    left: -1150px; } }
-
-#parent {
-  position: relative;
-  display: block;
-  height: 300px;
-  background: grey; }
-
-#child1, #child2 {
-  display: block;
-  width: 50%;
-  float: left;
-  border: 5px solid red;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+    left: calc(0% - 350px); } }
