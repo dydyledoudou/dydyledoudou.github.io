@@ -6,17 +6,14 @@ $( document ).ready(function() {
 
   red.addClass('slide-in');
   red.one(transEnd, function() {
-    red.removeClass('slide-in');
-    red.addClass('slide-out');
+    red.removeClass('slide-in').addClass('slide-out');
     green.addClass('slide-in');
   });
   green.one(transEnd, function() {
-    green.removeClass('slide-in');
-    green.addClass('slide-out');
+    green.removeClass('slide-in').addClass('slide-out');
     blue.addClass('slide-in');
   });
   blue.one(transEnd, function() {
-    blue.removeClass('slide-in');
-    blue.addClass('slide-out');
+    blue.removeClass('slide-in').addClass('slide-out');
   });
 });
