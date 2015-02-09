@@ -56,18 +56,30 @@
     position: absolute;
     left: 1050px; }
     #square-container .box.move {
-      -webkit-animation: my-anim 3s ease-in-out;
-      -moz-animation: my-anim 3s ease-in-out;
-      animation: my-anim 3s ease-in-out; }
+      -webkit-animation-name: my-anim;
+      -moz-animation-name: my-anim;
+      animation-name: my-anim;
+      -webkit-animation-duration: 3s;
+      -moz-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out; }
 
 #red {
   background-color: red; }
 
 #green {
-  background-color: green; }
+  background-color: green;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
 
 #blue {
-  background-color: blue; }
+  background-color: blue;
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  animation-delay: 4.5s; }
 
 @-webkit-keyframes my-anim {
   0% {

@@ -73,19 +73,25 @@ $hsize : 350px;
     left: 1050px;
 
     &.move{
-      @include animation(my-anim 3s ease-in-out)
+      // @include animation(my-anim 3s ease-in-out)
+      @include animation-name(my-anim);
+      @include animation-duration(3s);
+      @include animation-timing-function(ease-in-out);
     }
   }
 }
 
 #red{
   background-color: red;
+
 }
 #green{
   background-color: green;
+  @include animation-delay(2.5s);
 }
 #blue{
   background-color: blue;
+  @include animation-delay(4.5s);
 }
 
 

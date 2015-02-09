@@ -25,17 +25,30 @@
     var red = $('#red');
     var blue = $('#blue');
     var green = $('#green');
-    var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
 
     red.addClass("move");
-    red.one(animEnd, function() {
-      blue.addClass("move");
-    });
-    blue.one(animEnd, function() {
-      green.addClass("move");
-    });
+    blue.addClass("move");
+    green.addClass("move");
 
+    // var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
+    // red.removeClass("move").addClass("move");
+    // blue.removeClass("move");
+    // green.removeClass("move");
 
+    // red.one(animEnd, function() {
+    //   blue.addClass("move");
+    //   red.removeClass("move");
+    // });
+    // blue.one(animEnd, function() {
+    //   green.addClass("move");
+    //   blue.removeClass("move");
+    // });
+    // green.one(animEnd, function() {
+    //   red.addClass("move");
+    //   green.removeClass("move");
+    // });
+
+    // whatves
  });
 </script>
 </body>
