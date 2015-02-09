@@ -4,58 +4,13 @@ $wsize : 350px;
 $hsize : 350px;
 
 #favoris:hover{
-  @include animation(my-anim 2s ease-in-out infinite);
+  @include animation(my-anim2 2s ease-in-out infinite);
 }
-@include keyframes(my-anim) {
+@include keyframes(my-anim2) {
   0%{opacity : 1;}
   50%{opacity : 0;}
   100%{opacity: 1;}
 }
-
-// #square-container{
-//   width: 1050px;
-//   height: 350px;
-//   background-color: #cccccc;
-//   overflow: hidden;
-
-//   #red-square{
-//     background-color: red;
-//     left: 150px;
-//     position: relative;
-
-//     &.move1{
-//       left: -350px;
-//       @include animation(red-anim 2s ease-in-out);
-//     }
-//   }
-//   #green-square{
-//     background-color: green;
-//     left: 700px;
-//     position: relative;
-
-//     &.move2{
-//       @include animation(green-anim 6s ease-in-out);
-//       left: -700px;
-//     }
-//   }
-//   #blue-square{
-//     background-color: blue;
-//     left: 350px;
-//     position: relative;
-
-//     &.move4{
-//       @include animation(blue-anim 8s ease-in-out);
-//       left: -1150px;
-//     }
-//   }
-
-// }
-
-// #red-square, #green-square, #blue-square{
-//   width: $wsize;
-//   height: $hsize;
-//   float: left;
-// }
 
 /**   Seconde version du CSS   **/
 
@@ -87,11 +42,11 @@ $hsize : 350px;
 }
 #green{
   background-color: green;
-  @include animation-delay(2.5s);
+  @include animation-delay(2s);
 }
 #blue{
   background-color: blue;
-  @include animation-delay(4.5s);
+  @include animation-delay(4s);
 }
 
 

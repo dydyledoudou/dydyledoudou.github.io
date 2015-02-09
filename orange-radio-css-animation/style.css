@@ -1,9 +1,9 @@
 #favoris:hover {
-  -webkit-animation: my-anim 2s ease-in-out infinite;
-  -moz-animation: my-anim 2s ease-in-out infinite;
-  animation: my-anim 2s ease-in-out infinite; }
+  -webkit-animation: my-anim2 2s ease-in-out infinite;
+  -moz-animation: my-anim2 2s ease-in-out infinite;
+  animation: my-anim2 2s ease-in-out infinite; }
 
-@-webkit-keyframes my-anim {
+@-webkit-keyframes my-anim2 {
   0% {
     opacity: 1; }
 
@@ -13,7 +13,7 @@
   100% {
     opacity: 1; } }
 
-@-moz-keyframes my-anim {
+@-moz-keyframes my-anim2 {
   0% {
     opacity: 1; }
 
@@ -23,7 +23,7 @@
   100% {
     opacity: 1; } }
 
-@-o-keyframes my-anim {
+@-o-keyframes my-anim2 {
   0% {
     opacity: 1; }
 
@@ -33,7 +33,7 @@
   100% {
     opacity: 1; } }
 
-@keyframes my-anim {
+@keyframes my-anim2 {
   0% {
     opacity: 1; }
 
@@ -71,15 +71,15 @@
 
 #green {
   background-color: green;
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  animation-delay: 2.5s; }
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s; }
 
 #blue {
   background-color: blue;
-  -webkit-animation-delay: 4.5s;
-  -moz-animation-delay: 4.5s;
-  animation-delay: 4.5s; }
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s; }
 
 @-webkit-keyframes my-anim {
   0% {

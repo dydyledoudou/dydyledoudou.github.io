@@ -11,7 +11,8 @@
   <img src="img/indicator.png" id="favoris">
 </div>
 <div>
-  <a href="#" id="start-anim">Clic dans la zone grise pour animer</a>
+  <a href="#" id="start-anim">Clic le lien pour animer</a>
+  <br>
   <div id="square-container">
     <div class="box" id="red"></div>
     <div class="box" id="green"></div>
@@ -25,30 +26,18 @@
     var red = $('#red');
     var blue = $('#blue');
     var green = $('#green');
+    var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
 
-    red.addClass("move");
-    blue.addClass("move");
-    green.addClass("move");
+    red.addClass("move").one(animEnd, function() {
+      red.removeClass("move");
+    });
 
-    // var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
-    // red.removeClass("move").addClass("move");
-    // blue.removeClass("move");
-    // green.removeClass("move");
-
-    // red.one(animEnd, function() {
-    //   blue.addClass("move");
-    //   red.removeClass("move");
-    // });
-    // blue.one(animEnd, function() {
-    //   green.addClass("move");
-    //   blue.removeClass("move");
-    // });
-    // green.one(animEnd, function() {
-    //   red.addClass("move");
-    //   green.removeClass("move");
-    // });
-
-    // whatves
+    blue.addClass("move").one(animEnd, function() {
+      blue.removeClass("move");
+    });
+    green.addClass("move").one(animEnd, function() {
+      green.removeClass("move");
+    });
  });
 </script>
 </body>
