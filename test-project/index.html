@@ -2,18 +2,43 @@
 <head>
   <title>test layout for radio full screen player</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
   <div class="player-container">
     <div class="logo-container">
-      <img src="img/station_logo.png" alt="">
+      <div class="box" id="red"></div>
+      <div class="box2" id="green"></div>
+      <div class="box2" id="blue"></div>
     </div>
     <div class="content-container">
       <h1>A JAZZ FM Web Radio</h1>
       <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
       TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
       QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
+      <input type="button" id="start-anim" value="Play Anim">
     </div>
+
   </div>
+
+  <script type="text/javascript">
+ $('#start-anim').click(function() {
+
+    var red = $('#red');
+    var blue = $('#blue');
+    var green = $('#green');
+    var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
+
+    red.addClass("move1");
+
+    blue.addClass("move2").one(animEnd, function() {
+      blue.removeClass("move2");
+      red.removeClass("move1");
+    });
+    green.addClass("move2").one(animEnd, function() {
+      green.removeClass("move2");
+    });
+ });
+</script>
 </body>
 </html>

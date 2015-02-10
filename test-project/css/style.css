@@ -13,6 +13,7 @@ body {
   display: block;
   width: 1280px;
   height: 720px;
+  overflow: hidden;
   background: -webkit-radial-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)) left repeat, url("../img/bg.png");
   background: radial-gradient(   rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)) left repeat, url("../img/bg.png");
   border: 1px solid black; }
@@ -34,10 +35,137 @@ body {
 
 .logo-container {
   display: block;
-  position: absolute;
-  left: 245px;
-  top: 140px;
+  left: 237px;
+  top: 130px;
   width: 350px;
   height: 350px;
   background: white;
-  border: 2px solid #444444; }
+  border: 2px solid #444444;
+  overflow: hidden;
+  position: relative; }
+  .logo-container .box {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 0; }
+    .logo-container .box.move1 {
+      -webkit-animation-name: my-anim;
+      -moz-animation-name: my-anim;
+      animation-name: my-anim;
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      animation-duration: 1.5s;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      left: calc(0% - 587px); }
+  .logo-container .box2 {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 1050px; }
+    .logo-container .box2.move2 {
+      -webkit-animation-name: my-anim2;
+      -moz-animation-name: my-anim2;
+      animation-name: my-anim2;
+      -webkit-animation-duration: 3.5s;
+      -moz-animation-duration: 3.5s;
+      animation-duration: 3.5s;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out; }
+
+#red {
+  background-color: red; }
+
+#green {
+  background-color: green;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s; }
+
+#blue {
+  background-color: blue;
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+
+@-webkit-keyframes my-anim {
+  0% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }
+
+@-moz-keyframes my-anim {
+  0% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }
+
+@-o-keyframes my-anim {
+  0% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }
+
+@keyframes my-anim {
+  0% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }
+
+@-webkit-keyframes my-anim2 {
+  0% {
+    left: 1050px; }
+
+  50% {
+    left: 0px; }
+
+  75% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }
+
+@-moz-keyframes my-anim2 {
+  0% {
+    left: 1050px; }
+
+  50% {
+    left: 0px; }
+
+  75% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }
+
+@-o-keyframes my-anim2 {
+  0% {
+    left: 1050px; }
+
+  50% {
+    left: 0px; }
+
+  75% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }
+
+@keyframes my-anim2 {
+  0% {
+    left: 1050px; }
+
+  50% {
+    left: 0px; }
+
+  75% {
+    left: 0px; }
+
+  100% {
+    left: calc(0% - 587px); } }

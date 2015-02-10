@@ -1,6 +1,8 @@
 @import 'bourbon';
 
 $dark-grey: #444444;
+$wsize : 350px;
+$hsize : 350px;
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
@@ -20,6 +22,7 @@ body {
   display: block;
   width: 1280px;
   height: 720px;
+  overflow: hidden;
   @include background(radial-gradient(rgba(white, 0.9), rgba(white, 0.3)) left repeat, url('../img/bg.png'));
 
   border: 1px solid black;
@@ -53,13 +56,67 @@ body {
 
 .logo-container {
   display: block;
-  position: absolute;
 
-  left: 245px;
-  top: 140px;
+  left: 237px;
+  top: 130px;
 
   width: 350px;
   height: 350px;
   background: white;
   border: 2px solid $dark-grey;
+  overflow: hidden;
+  position: relative;
+
+  .box{
+    width: $wsize;
+    height: $hsize;
+    position: absolute;
+    left: 0;
+
+    &.move1{
+      // @include animation(my-anim 3s ease-in-out)
+      @include animation-name(my-anim);
+      @include animation-duration(1.5s);
+      @include animation-timing-function(ease-in-out);
+      left: calc(0% - 587px)
+
+    }
+  }
+  .box2{
+    width: $wsize;
+    height: $hsize;
+    position: absolute;
+    left: 1050px;
+
+    &.move2{
+      // @include animation(my-anim 3s ease-in-out)
+      @include animation-name(my-anim2);
+      @include animation-duration(3.5s);
+      @include animation-timing-function(ease-in-out);
+    }
+  }
 }
+
+#red{
+  background-color: red;
+}
+#green{
+  background-color: green;
+  @include animation-delay(1s);
+}
+#blue{
+  background-color: blue;
+  @include animation-delay(3.5s);
+}
+
+@include keyframes(my-anim) {
+  0% {left: 0px;}
+  100% {left: calc(0% - 587px);}
+}
+@include keyframes(my-anim2) {
+  0% {left: 1050px;}
+  50% {left: 0px;}
+  75% {left: 0px;}
+  100% {left: calc(0% - 587px);}
+}
+
