@@ -27,14 +27,18 @@
     var red = $('#red');
     var blue = $('#blue');
     var green = $('#green');
+    var text = $('.content-container');
     var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
 
     red.addClass("move1");
+    text.addClass("opacity-text");
 
     blue.addClass("move2").one(animEnd, function() {
       blue.removeClass("move2");
       red.removeClass("move1");
+      text.removeClass("opacity-text");
     });
+
     green.addClass("move2").one(animEnd, function() {
       green.removeClass("move2");
     });

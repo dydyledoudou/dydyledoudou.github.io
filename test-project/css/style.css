@@ -32,6 +32,92 @@ body {
     margin: 0; }
   .content-container p {
     text-transform: lowercase; }
+  .content-container.opacity-text {
+    -webkit-animation-name: my-anim3;
+    -moz-animation-name: my-anim3;
+    animation-name: my-anim3;
+    -webkit-animation-duration: 8.5s;
+    -moz-animation-duration: 8.5s;
+    animation-duration: 8.5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes my-anim3 {
+  0% {
+    opacity: 1; }
+
+  15% {
+    opacity: 0; }
+
+  45% {
+    opacity: 1; }
+
+  55% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes my-anim3 {
+  0% {
+    opacity: 1; }
+
+  15% {
+    opacity: 0; }
+
+  45% {
+    opacity: 1; }
+
+  55% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes my-anim3 {
+  0% {
+    opacity: 1; }
+
+  15% {
+    opacity: 0; }
+
+  45% {
+    opacity: 1; }
+
+  55% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes my-anim3 {
+  0% {
+    opacity: 1; }
+
+  15% {
+    opacity: 0; }
+
+  45% {
+    opacity: 1; }
+
+  55% {
+    opacity: 0; }
+
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; } }
 
 .logo-container {
   display: block;
@@ -41,8 +127,8 @@ body {
   height: 350px;
   background: white;
   border: 2px solid #444444;
-  overflow: hidden;
-  position: relative; }
+  position: relative;
+  z-index: 1000; }
   .logo-container .box {
     width: 350px;
     height: 350px;
@@ -58,7 +144,7 @@ body {
       -webkit-animation-timing-function: ease-in-out;
       -moz-animation-timing-function: ease-in-out;
       animation-timing-function: ease-in-out;
-      left: calc(0% - 587px); }
+      left: calc(0% - 590px); }
   .logo-container .box2 {
     width: 350px;
     height: 350px;
@@ -86,9 +172,9 @@ body {
 
 #blue {
   background-color: blue;
-  -webkit-animation-delay: 3.5s;
-  -moz-animation-delay: 3.5s;
-  animation-delay: 3.5s; }
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  animation-delay: 4.5s; }
 
 @-webkit-keyframes my-anim {
   0% {

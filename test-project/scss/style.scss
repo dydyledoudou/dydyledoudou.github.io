@@ -50,8 +50,22 @@ body {
     text-transform: lowercase;
   }
 
+  &.opacity-text{
+    @include animation-name(my-anim3);
+    @include animation-duration(8.5s);
+    @include animation-timing-function(ease-in-out);
+  }
+
 }
 
+@include keyframes(my-anim3) {
+  0% {opacity: 1}
+  15% {opacity: 0;}
+  45% {opacity: 1;}
+  55% {opacity: 0;}
+  75% {opacity: 1;}
+  100% {opacity: 1;}
+}
 
 
 .logo-container {
@@ -64,8 +78,9 @@ body {
   height: 350px;
   background: white;
   border: 2px solid $dark-grey;
-  overflow: hidden;
   position: relative;
+  z-index: 1000;
+
 
   .box{
     width: $wsize;
@@ -78,7 +93,7 @@ body {
       @include animation-name(my-anim);
       @include animation-duration(1.5s);
       @include animation-timing-function(ease-in-out);
-      left: calc(0% - 587px)
+      left: calc(0% - 590px)
 
     }
   }
@@ -106,7 +121,7 @@ body {
 }
 #blue{
   background-color: blue;
-  @include animation-delay(3.5s);
+  @include animation-delay(4.5s);
 }
 
 @include keyframes(my-anim) {
