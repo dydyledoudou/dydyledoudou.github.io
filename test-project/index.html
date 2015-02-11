@@ -8,16 +8,30 @@
   <div class="player-container">
     <div class="logo-container">
       <div class="box" id="red"></div>
-      <div class="box2" id="green"></div>
-      <div class="box2" id="blue"></div>
+      <div class="box" id="green"></div>
+      <div class="box" id="blue"></div>
     </div>
     <div class="content-container">
-      <h1>A JAZZ FM Web Radio</h1>
-      <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
-      TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
-      QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
-      <input type="button" id="start-anim" value="Play Anim">
+      <div class="content-box" id="red-content">
+        <h1>A Red Radio</h1>
+        <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
+        TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
+        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
+      </div>
+      <div class="content-box" id="green-content">
+        <h1>A Green Radio</h1>
+        <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
+        TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
+        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
+      </div>
+      <div class="content-box" id="blue-content">
+        <h1>A Blue Radio</h1>
+        <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
+        TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
+        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
+      </div>
     </div>
+    <input type="button" id="start-anim" value="Play Anim">
 
   </div>
 
@@ -25,23 +39,45 @@
  $('#start-anim').click(function() {
 
     var red = $('#red');
-    var blue = $('#blue');
     var green = $('#green');
-    var text = $('.content-container');
+    var blue = $('#blue');
+
+    var r_content = $('#red-content');
+    var g_content = $('#green-content');
+    var b_content = $('#blue-content');
+
+    // var text = $('.content-container');
+    // text.addClass("opacity-text");
+
     var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
 
-    red.addClass("move1");
-    text.addClass("opacity-text");
+    red.addClass("slide-out");
+    r_content.addClass("fade-out");
 
-    blue.addClass("move2").one(animEnd, function() {
-      blue.removeClass("move2");
-      red.removeClass("move1");
-      text.removeClass("opacity-text");
+    red.one(animEnd, function() {
+      red.removeClass("slide-out").addClass("finished");
+      r_content.addClass("hiddenify");
     });
 
-    green.addClass("move2").one(animEnd, function() {
-      green.removeClass("move2");
+    green.addClass("slide-in-out");
+    g_content.addClass("fade-in-out");
+
+    green.one(animEnd, function() {
+      green.removeClass("slide-in-out");
+      g_content.removeClass("fade-in-out");
     });
+
+    blue.addClass("slide-in-out");
+    b_content.addClass("fade-in-out");
+
+    blue.one(animEnd, function() {
+      blue.removeClass("slide-in-out");
+      b_content.removeClass("fade-in-out");
+      red.removeClass("finished");
+      r_content.removeClass("fade-out hiddenify");
+    });
+
+
  });
 </script>
 </body>

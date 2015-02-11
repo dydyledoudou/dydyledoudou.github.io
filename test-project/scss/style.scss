@@ -23,7 +23,7 @@ body {
   width: 1280px;
   height: 720px;
   overflow: hidden;
-  @include background(radial-gradient(rgba(white, 0.9), rgba(white, 0.3)) left repeat, url('../img/bg.png'));
+  background: url("../img/bg.png"), url("../img/grid.png");
 
   border: 1px solid black;
 }
@@ -49,24 +49,7 @@ body {
   p {
     text-transform: lowercase;
   }
-
-  &.opacity-text{
-    @include animation-name(my-anim3);
-    @include animation-duration(8.5s);
-    @include animation-timing-function(ease-in-out);
-  }
-
 }
-
-@include keyframes(my-anim3) {
-  0% {opacity: 1}
-  15% {opacity: 0;}
-  45% {opacity: 1;}
-  55% {opacity: 0;}
-  75% {opacity: 1;}
-  100% {opacity: 1;}
-}
-
 
 .logo-container {
   display: block;
@@ -86,52 +69,97 @@ body {
     width: $wsize;
     height: $hsize;
     position: absolute;
-    left: 0;
-
-    &.move1{
-      // @include animation(my-anim 3s ease-in-out)
-      @include animation-name(my-anim);
-      @include animation-duration(1.5s);
-      @include animation-timing-function(ease-in-out);
-      left: calc(0% - 590px)
-
-    }
-  }
-  .box2{
-    width: $wsize;
-    height: $hsize;
-    position: absolute;
     left: 1050px;
 
-    &.move2{
-      // @include animation(my-anim 3s ease-in-out)
-      @include animation-name(my-anim2);
+    &.slide-out{
+      @include animation-name(slide-out);
+      @include animation-duration(1.5s);
+      @include animation-timing-function(ease-in);
+      left: -590px;
+    }
+
+    &.slide-in-out{
+      @include animation-name(slide-in-out);
       @include animation-duration(3.5s);
-      @include animation-timing-function(ease-in-out);
+      @include animation-timing-function(ease-out);
     }
   }
 }
 
 #red{
   background-color: red;
+  left: 0;
 }
+
+#red.finished {
+  left: -590px;
+}
+
 #green{
   background-color: green;
   @include animation-delay(1s);
 }
+
 #blue{
   background-color: blue;
   @include animation-delay(4.5s);
 }
 
-@include keyframes(my-anim) {
-  0% {left: 0px;}
-  100% {left: calc(0% - 587px);}
+
+.content-box {
+  position: absolute;
+  opacity: 0;
+
+  &.fade-out {
+    @include animation-name(fade-out);
+    @include animation-duration(1.5s);
+    @include animation-timing-function(ease-out);
+  }
+
+  &.fade-in-out{
+    @include animation-name(fade-in-out);
+    @include animation-duration(3.5s);
+    @include animation-timing-function(ease-out);
+  }
 }
-@include keyframes(my-anim2) {
+
+#red-content {
+  opacity: 1;
+
+  &.hiddenify{
+    opacity: 0;
+  }
+}
+
+#green-content{
+  @include animation-delay(1s);
+}
+
+#blue-content{
+  @include animation-delay(4.5s);
+}
+
+
+
+@include keyframes(slide-out) {
+  0% {left: 0px;}
+  100% {left: -590px;}
+}
+@include keyframes(slide-in-out) {
   0% {left: 1050px;}
   50% {left: 0px;}
   75% {left: 0px;}
-  100% {left: calc(0% - 587px);}
+  100% {left: -590px;}
 }
 
+@include keyframes(fade-out) {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@include keyframes(fade-in-out) {
+  0% {opacity: 0;}
+  40% {opacity: 0;}
+  50% {opacity: 1;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}
