@@ -31,9 +31,11 @@
         QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
       </div>
     </div>
-    <input type="button" id="start-anim" value="Play Anim">
+
 
   </div>
+    <input type="button" id="start-anim" value="Play Anim">
+    <input type="button" id="PageRefresh" value="Refresh">
 
   <script type="text/javascript">
  $('#start-anim').click(function() {
@@ -46,8 +48,6 @@
     var g_content = $('#green-content');
     var b_content = $('#blue-content');
 
-    // var text = $('.content-container');
-    // text.addClass("opacity-text");
 
     var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
 
@@ -57,25 +57,36 @@
     red.one(animEnd, function() {
       red.removeClass("slide-out").addClass("finished");
       r_content.addClass("hiddenify");
+      green.addClass("slide-in");
+      g_content.addClass("fade-in");
     });
-
-    green.addClass("slide-in-out");
-    g_content.addClass("fade-in-out");
 
     green.one(animEnd, function() {
-      green.removeClass("slide-in-out");
-      g_content.removeClass("fade-in-out");
-    });
+      green.removeClass("slide-in");
+      green.addClass("slide-out");
 
-    blue.addClass("slide-in-out");
-    b_content.addClass("fade-in-out");
+      g_content.removeClass("fade-in");
+      g_content.addClass("fade-out");
+
+      blue.addClass("slide-in");
+      b_content.addClass("fade-in");
+    });
 
     blue.one(animEnd, function() {
-      blue.removeClass("slide-in-out");
-      b_content.removeClass("fade-in-out");
+      green.removeClass("slide-out");
+      g_content.removeClass("fade-out");
+
       red.removeClass("finished");
       r_content.removeClass("fade-out hiddenify");
+
     });
+
+    $('#PageRefresh').click(function() {
+      location.reload();
+    });
+
+
+    
 
 
  });

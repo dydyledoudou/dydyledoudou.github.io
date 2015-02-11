@@ -73,14 +73,14 @@ body {
 
     &.slide-out{
       @include animation-name(slide-out);
-      @include animation-duration(1.5s);
+      @include animation-duration(2s);
       @include animation-timing-function(ease-in);
-      left: -590px;
+      // left: -590px;
     }
 
-    &.slide-in-out{
-      @include animation-name(slide-in-out);
-      @include animation-duration(3.5s);
+    &.slide-in{
+      @include animation-name(slide-in);
+      @include animation-duration(2s);
       @include animation-timing-function(ease-out);
     }
   }
@@ -97,12 +97,12 @@ body {
 
 #green{
   background-color: green;
-  @include animation-delay(1s);
+   // @include animation-delay(1s);
 }
 
 #blue{
   background-color: blue;
-  @include animation-delay(4.5s);
+  @include animation-delay(1s);
 }
 
 
@@ -110,16 +110,15 @@ body {
   position: absolute;
   opacity: 0;
 
-  &.fade-out {
-    @include animation-name(fade-out);
-    @include animation-duration(1.5s);
+&.fade-in{
+    @include animation-name(fade-in);
+    @include animation-duration(2s);
     @include animation-timing-function(ease-out);
   }
-
-  &.fade-in-out{
-    @include animation-name(fade-in-out);
-    @include animation-duration(3.5s);
-    @include animation-timing-function(ease-out);
+  &.fade-out {
+    @include animation-name(fade-out);
+    @include animation-duration(2s);
+    @include animation-timing-function(ease-in);
   }
 }
 
@@ -132,34 +131,29 @@ body {
 }
 
 #green-content{
-  @include animation-delay(1s);
+   // @include animation-delay(1s);
 }
 
 #blue-content{
-  @include animation-delay(4.5s);
+   @include animation-delay(1s);
 }
 
 
-
+@include keyframes(slide-in) {
+  0% {left: 1050px;}
+  100% {left: 0px;}
+}
 @include keyframes(slide-out) {
   0% {left: 0px;}
   100% {left: -590px;}
 }
-@include keyframes(slide-in-out) {
-  0% {left: 1050px;}
-  50% {left: 0px;}
-  75% {left: 0px;}
-  100% {left: -590px;}
-}
 
-@include keyframes(fade-out) {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
-}
-@include keyframes(fade-in-out) {
+@include keyframes(fade-in) {
   0% {opacity: 0;}
   40% {opacity: 0;}
-  50% {opacity: 1;}
-  75% {opacity: 1;}
+  100% {opacity: 1;}
+}
+@include keyframes(fade-out) {
+  0% {opacity: 1;}
   100% {opacity: 0;}
 }

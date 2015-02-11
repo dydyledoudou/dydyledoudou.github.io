@@ -51,20 +51,19 @@ body {
       -webkit-animation-name: slide-out;
       -moz-animation-name: slide-out;
       animation-name: slide-out;
-      -webkit-animation-duration: 1.5s;
-      -moz-animation-duration: 1.5s;
-      animation-duration: 1.5s;
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      animation-duration: 2s;
       -webkit-animation-timing-function: ease-in;
       -moz-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-      left: -590px; }
-    .logo-container .box.slide-in-out {
-      -webkit-animation-name: slide-in-out;
-      -moz-animation-name: slide-in-out;
-      animation-name: slide-in-out;
-      -webkit-animation-duration: 3.5s;
-      -moz-animation-duration: 3.5s;
-      animation-duration: 3.5s;
+      animation-timing-function: ease-in; }
+    .logo-container .box.slide-in {
+      -webkit-animation-name: slide-in;
+      -moz-animation-name: slide-in;
+      animation-name: slide-in;
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      animation-duration: 2s;
       -webkit-animation-timing-function: ease-out;
       -moz-animation-timing-function: ease-out;
       animation-timing-function: ease-out; }
@@ -77,55 +76,75 @@ body {
   left: -590px; }
 
 #green {
-  background-color: green;
+  background-color: green; }
+
+#blue {
+  background-color: blue;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s; }
 
-#blue {
-  background-color: blue;
-  -webkit-animation-delay: 4.5s;
-  -moz-animation-delay: 4.5s;
-  animation-delay: 4.5s; }
-
 .content-box {
   position: absolute;
   opacity: 0; }
+  .content-box.fade-in {
+    -webkit-animation-name: fade-in;
+    -moz-animation-name: fade-in;
+    animation-name: fade-in;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
   .content-box.fade-out {
     -webkit-animation-name: fade-out;
     -moz-animation-name: fade-out;
     animation-name: fade-out;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
-  .content-box.fade-in-out {
-    -webkit-animation-name: fade-in-out;
-    -moz-animation-name: fade-in-out;
-    animation-name: fade-in-out;
-    -webkit-animation-duration: 3.5s;
-    -moz-animation-duration: 3.5s;
-    animation-duration: 3.5s;
-    -webkit-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-timing-function: ease-out; }
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
 
 #red-content {
   opacity: 1; }
   #red-content.hiddenify {
     opacity: 0; }
 
-#green-content {
+#blue-content {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s; }
 
-#blue-content {
-  -webkit-animation-delay: 4.5s;
-  -moz-animation-delay: 4.5s;
-  animation-delay: 4.5s; }
+@-webkit-keyframes slide-in {
+  0% {
+    left: 1050px; }
+
+  100% {
+    left: 0px; } }
+
+@-moz-keyframes slide-in {
+  0% {
+    left: 1050px; }
+
+  100% {
+    left: 0px; } }
+
+@-o-keyframes slide-in {
+  0% {
+    left: 1050px; }
+
+  100% {
+    left: 0px; } }
+
+@keyframes slide-in {
+  0% {
+    left: 1050px; }
+
+  100% {
+    left: 0px; } }
 
 @-webkit-keyframes slide-out {
   0% {
@@ -155,57 +174,45 @@ body {
   100% {
     left: -590px; } }
 
-@-webkit-keyframes slide-in-out {
+@-webkit-keyframes fade-in {
   0% {
-    left: 1050px; }
+    opacity: 0; }
 
-  50% {
-    left: 0px; }
-
-  75% {
-    left: 0px; }
+  40% {
+    opacity: 0; }
 
   100% {
-    left: -590px; } }
+    opacity: 1; } }
 
-@-moz-keyframes slide-in-out {
+@-moz-keyframes fade-in {
   0% {
-    left: 1050px; }
+    opacity: 0; }
 
-  50% {
-    left: 0px; }
-
-  75% {
-    left: 0px; }
+  40% {
+    opacity: 0; }
 
   100% {
-    left: -590px; } }
+    opacity: 1; } }
 
-@-o-keyframes slide-in-out {
+@-o-keyframes fade-in {
   0% {
-    left: 1050px; }
+    opacity: 0; }
 
-  50% {
-    left: 0px; }
-
-  75% {
-    left: 0px; }
+  40% {
+    opacity: 0; }
 
   100% {
-    left: -590px; } }
+    opacity: 1; } }
 
-@keyframes slide-in-out {
+@keyframes fade-in {
   0% {
-    left: 1050px; }
+    opacity: 0; }
 
-  50% {
-    left: 0px; }
-
-  75% {
-    left: 0px; }
+  40% {
+    opacity: 0; }
 
   100% {
-    left: -590px; } }
+    opacity: 1; } }
 
 @-webkit-keyframes fade-out {
   0% {
@@ -230,70 +237,6 @@ body {
 
 @keyframes fade-out {
   0% {
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@-webkit-keyframes fade-in-out {
-  0% {
-    opacity: 0; }
-
-  40% {
-    opacity: 0; }
-
-  50% {
-    opacity: 1; }
-
-  75% {
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@-moz-keyframes fade-in-out {
-  0% {
-    opacity: 0; }
-
-  40% {
-    opacity: 0; }
-
-  50% {
-    opacity: 1; }
-
-  75% {
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@-o-keyframes fade-in-out {
-  0% {
-    opacity: 0; }
-
-  40% {
-    opacity: 0; }
-
-  50% {
-    opacity: 1; }
-
-  75% {
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 0; }
-
-  40% {
-    opacity: 0; }
-
-  50% {
-    opacity: 1; }
-
-  75% {
     opacity: 1; }
 
   100% {
