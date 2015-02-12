@@ -75,18 +75,20 @@ body {
     position: absolute;
     left: 1045px;
 
-    @include transition(all 2.5s);
+    @include transition(all);
 
     &.slide-in {
       left: 0;
       @include transition-timing-function(ease-out);
       @include transition-delay(2.5s);
+      @include transition-duration(2.5s);
     }
 
     &.slide-out {
       left: calc(0% - 590px);
       @include transition-timing-function(cubic-bezier(0.55, 0.055, 0.675, 0.19));
       @include transition-delay(1s);
+      @include transition-duration(1s);
     }
   }
 }
