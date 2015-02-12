@@ -1,15 +1,15 @@
 <html>
 <head>
-  <title>test layout for radio full screen player</title>
+  <title>Layout and animation</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
   <div class="player-container">
     <div class="logo-container">
-      <div class="box" id="red"></div>
-      <div class="box" id="green"></div>
-      <div class="box" id="blue"></div>
+      <section class="box" id="red"></section>
+      <section class="box" id="green"></section>
+      <section class="box" id="blue"></section>
     </div>
     <div class="content-container">
       <div class="content-box" id="red-content">
@@ -20,13 +20,13 @@
       </div>
       <div class="content-box" id="green-content">
         <h1>A Green Radio</h1>
-        <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
+        <p>TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
         TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
-        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
+        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN</p>
       </div>
       <div class="content-box" id="blue-content">
         <h1>A Blue Radio</h1>
-        <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
+        <p>XERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT.
         TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
         QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
       </div>
@@ -38,58 +38,84 @@
     <input type="button" id="PageRefresh" value="Refresh">
 
   <script type="text/javascript">
- $('#start-anim').click(function() {
+    $('#start-anim').click(function() {
 
-    var red = $('#red');
-    var green = $('#green');
-    var blue = $('#blue');
+      var red = $('#red');
+      var green = $('#green');
+      var blue = $('#blue');
 
-    var r_content = $('#red-content');
-    var g_content = $('#green-content');
-    var b_content = $('#blue-content');
+      var r_content = $('#red-content');
+      var g_content = $('#green-content');
+      var b_content = $('#blue-content');
 
+      var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
-    var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
+      red.addClass('slide-in');
+      r_content.addClass('fade-in');
 
-    red.addClass("slide-out");
-    r_content.addClass("fade-out");
-
-    red.one(animEnd, function() {
-      red.removeClass("slide-out").addClass("finished");
-      r_content.addClass("hiddenify");
-      green.addClass("slide-in");
-      g_content.addClass("fade-in");
+      red.one(transEnd, function() {
+        red.removeClass('slide-in').addClass('slide-out');
+        r_content.removeClass('fade-in').addClass('fade-out');
+        green.addClass('slide-in');
+        g_content.addClass('fade-in')
+      });
+      green.one(transEnd, function() {
+        green.removeClass('slide-in').addClass('slide-out');
+        g_content.removeClass('fade-in').addClass('fade-out');
+        blue.addClass('slide-in');
+        b_content.addClass('fade-in');
+      });
+      blue.one(transEnd, function() {
+        blue.removeClass('slide-in').addClass('slide-out');
+        b_content.removeClass('fade-in').addClass('fade-out');
+      });
     });
 
-    green.one(animEnd, function() {
-      green.removeClass("slide-in");
-      green.addClass("slide-out");
+    // var red = $('#red');
+    // var green = $('#green');
+    // var blue = $('#blue');
 
-      g_content.removeClass("fade-in");
-      g_content.addClass("fade-out");
+    // var r_content = $('#red-content');
+    // var g_content = $('#green-content');
+    // var b_content = $('#blue-content');
 
-      blue.addClass("slide-in");
-      b_content.addClass("fade-in");
-    });
 
-    blue.one(animEnd, function() {
-      green.removeClass("slide-out");
-      g_content.removeClass("fade-out");
+    // var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
 
-      red.removeClass("finished");
-      r_content.removeClass("fade-out hiddenify");
+    // red.addClass("slide-out");
+    // r_content.addClass("fade-out");
 
-    });
+    // red.one(animEnd, function() {
+    //   red.removeClass("slide-out").addClass("finished");
+    //   r_content.addClass("hiddenify");
+    //   green.addClass("slide-in");
+    //   g_content.addClass("fade-in");
+    // });
+
+    // green.one(animEnd, function() {
+    //   green.removeClass("slide-in");
+    //   green.addClass("slide-out");
+
+    //   g_content.removeClass("fade-in");
+    //   g_content.addClass("fade-out");
+
+    //   blue.addClass("slide-in");
+    //   b_content.addClass("fade-in");
+    // });
+
+    // blue.one(animEnd, function() {
+    //   green.removeClass("slide-out");
+    //   g_content.removeClass("fade-out");
+
+    //   red.removeClass("finished");
+    //   r_content.removeClass("fade-out hiddenify");
+
+    // });
 
     $('#PageRefresh').click(function() {
       location.reload();
     });
 
-
-    
-
-
- });
 </script>
 </body>
 </html>

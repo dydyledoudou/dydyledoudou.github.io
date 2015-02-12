@@ -1,6 +1,7 @@
 @import 'bourbon';
 
 $dark-grey: #444444;
+$light-grey: #cccccc;
 $wsize : 350px;
 $hsize : 350px;
 
@@ -16,6 +17,12 @@ body {
   p:first-letter {
     text-transform: uppercase;
   }
+}
+
+#start-anim, #PageRefresh{
+  width: 150px;
+  height: 150px;
+  font-size: 25px;
 }
 
 .player-container {
@@ -53,14 +60,11 @@ body {
 
 .logo-container {
   display: block;
-
   left: 237px;
   top: 130px;
-
   width: 350px;
   height: 350px;
-  background: white;
-  border: 2px solid $dark-grey;
+  border: 2px solid $light-grey;
   position: relative;
   z-index: 1000;
 
@@ -69,40 +73,34 @@ body {
     width: $wsize;
     height: $hsize;
     position: absolute;
-    left: 1050px;
+    left: 1045px;
 
-    &.slide-out{
-      @include animation-name(slide-out);
-      @include animation-duration(2s);
-      @include animation-timing-function(ease-in);
-      // left: -590px;
+    @include transition(all 2.5s);
+
+    &.slide-in {
+      left: 0;
+      @include transition-timing-function(ease-out);
+      @include transition-delay(2.5s);
     }
 
-    &.slide-in{
-      @include animation-name(slide-in);
-      @include animation-duration(2s);
-      @include animation-timing-function(ease-out);
+    &.slide-out {
+      left: calc(0% - 590px);
+      @include transition-timing-function(cubic-bezier(0.55, 0.055, 0.675, 0.19));
+      @include transition-delay(1s);
     }
   }
 }
 
 #red{
   background-color: red;
-  left: 0;
-}
-
-#red.finished {
-  left: -590px;
 }
 
 #green{
   background-color: green;
-   // @include animation-delay(1s);
 }
 
 #blue{
   background-color: blue;
-  @include animation-delay(1s);
 }
 
 
@@ -110,50 +108,46 @@ body {
   position: absolute;
   opacity: 0;
 
-&.fade-in{
-    @include animation-name(fade-in);
-    @include animation-duration(2s);
-    @include animation-timing-function(ease-out);
-  }
-  &.fade-out {
-    @include animation-name(fade-out);
-    @include animation-duration(2s);
-    @include animation-timing-function(ease-in);
-  }
+  // @include transition(all 1.5s);
+
+    &.fade-in {
+      opacity: 1;
+      @include transition(opacity 1s ease-out 3.5s);
+    }
+
+    &.fade-out {
+      opacity: 0;
+      @include transition(opacity 1s ease-in 2s);
+    }
 }
 
 #red-content {
-  opacity: 1;
-
-  &.hiddenify{
-    opacity: 0;
-  }
 }
 
 #green-content{
-   // @include animation-delay(1s);
 }
 
 #blue-content{
-   @include animation-delay(1s);
 }
 
 
-@include keyframes(slide-in) {
-  0% {left: 1050px;}
-  100% {left: 0px;}
-}
-@include keyframes(slide-out) {
-  0% {left: 0px;}
-  100% {left: -590px;}
-}
 
-@include keyframes(fade-in) {
-  0% {opacity: 0;}
-  40% {opacity: 0;}
-  100% {opacity: 1;}
-}
-@include keyframes(fade-out) {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
-}
+
+// @include keyframes(slide-in) {
+//   0% {left: 1050px;}
+//   100% {left: 0px;}
+// }
+// @include keyframes(slide-out) {
+//   0% {left: 0px;}
+//   100% {left: -590px;}
+// }
+
+// @include keyframes(fade-in) {
+//   0% {opacity: 0;}
+//   40% {opacity: 0;}
+//   100% {opacity: 1;}
+// }
+// @include keyframes(fade-out) {
+//   0% {opacity: 1;}
+//   100% {opacity: 0;}
+// }
