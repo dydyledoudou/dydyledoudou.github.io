@@ -81,7 +81,7 @@ body {
       left: 0;
       @include transition-timing-function(ease-out);
       @include transition-delay(2.5s);
-      @include transition-duration(2.5s);
+      @include transition-duration(2s);
     }
 
     &.slide-out {
