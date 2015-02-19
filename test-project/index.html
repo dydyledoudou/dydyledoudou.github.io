@@ -1,38 +1,34 @@
 <html>
 <head>
   <title>Layout and animation</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
   <div class="player-container">
+  <div class="gradient">
     <div class="logo-container">
-      <section class="box" id="red"></section>
+      <section class="box" id="red" style="left:0;"></section>
       <section class="box" id="green"></section>
       <section class="box" id="blue"></section>
     </div>
     <div class="content-container">
-      <div class="content-box" id="red-content">
-        <h1>A Red Radio</h1>
-        <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD
-        TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
-        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
+      <div class="content-box" id="red-content" style="opacity:1;">
+        <h1>Virgin Radio</h1>
+        <p>La Playlist Pop, Rock, Electro</p>
       </div>
       <div class="content-box" id="green-content">
-        <h1>A Green Radio</h1>
-        <p>TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
-        TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
-        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN</p>
+        <h1>France Musique</h1>
+        <p>Radio musicale de Radio France consacrée à la musique classique et au jazz</p>
       </div>
       <div class="content-box" id="blue-content">
-        <h1>A Blue Radio</h1>
-        <p>XERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT.
-        TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM,
-        QUIS NOSTRUD EXERCITATION ULLAMCO/LABORIS/NISI/UT/ALIQUIP/EX/EA/COMMODO/CONSEQUAT./DUIS/AUTE/IRURE/DOLOR/IN/REPREHENDERIT/IN/VOLUPTATE/VELIT/ESSE/CILLUM/DOLORE/EU/FUGIAT/NULLA/PARIATUR.</p>
+        <h1>rfi Afrique</h1>
+        <p>Talk and news in French for Africa</p>
       </div>
     </div>
 
-
+  </div>
   </div>
     <input type="button" id="start-anim" value="Play Anim">
     <input type="button" id="PageRefresh" value="Refresh">
@@ -43,6 +39,7 @@
       var red = $('#red');
       var green = $('#green');
       var blue = $('#blue');
+      var gradient = $('.gradient');
 
       var r_content = $('#red-content');
       var g_content = $('#green-content');
@@ -50,67 +47,37 @@
 
       var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
-      red.addClass('slide-in');
-      r_content.addClass('fade-in');
+      // $(".player-container").css('background', 'url("./img/bg.png"), url("./img/grid.png")').addClass('fade-in');
+
+      gradient.addClass('fullplayer-in');
+
+      gradient.one(transEnd, function() {
+        red.removeAttr('style').addClass('slide-out');
+        r_content.removeAttr('style').addClass('fade-out');
+      });
+
 
       red.one(transEnd, function() {
-        red.removeClass('slide-in').addClass('slide-out');
-        r_content.removeClass('fade-in').addClass('fade-out');
         green.addClass('slide-in');
-        g_content.addClass('fade-in')
+        g_content.addClass('fade-in');
       });
       green.one(transEnd, function() {
+        red.removeClass('slide-out');
+        r_content.removeClass('fade-out');
         green.removeClass('slide-in').addClass('slide-out');
         g_content.removeClass('fade-in').addClass('fade-out');
         blue.addClass('slide-in');
         b_content.addClass('fade-in');
       });
       blue.one(transEnd, function() {
+        green.removeClass('slide-out');
+        g_content.removeClass('fade-out');
         blue.removeClass('slide-in').addClass('slide-out');
         b_content.removeClass('fade-in').addClass('fade-out');
+        gradient.removeClass('fullplayer-in').addClass('fullplayer-out');
       });
+
     });
-
-    // var red = $('#red');
-    // var green = $('#green');
-    // var blue = $('#blue');
-
-    // var r_content = $('#red-content');
-    // var g_content = $('#green-content');
-    // var b_content = $('#blue-content');
-
-
-    // var animEnd = 'webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend';
-
-    // red.addClass("slide-out");
-    // r_content.addClass("fade-out");
-
-    // red.one(animEnd, function() {
-    //   red.removeClass("slide-out").addClass("finished");
-    //   r_content.addClass("hiddenify");
-    //   green.addClass("slide-in");
-    //   g_content.addClass("fade-in");
-    // });
-
-    // green.one(animEnd, function() {
-    //   green.removeClass("slide-in");
-    //   green.addClass("slide-out");
-
-    //   g_content.removeClass("fade-in");
-    //   g_content.addClass("fade-out");
-
-    //   blue.addClass("slide-in");
-    //   b_content.addClass("fade-in");
-    // });
-
-    // blue.one(animEnd, function() {
-    //   green.removeClass("slide-out");
-    //   g_content.removeClass("fade-out");
-
-    //   red.removeClass("finished");
-    //   r_content.removeClass("fade-out hiddenify");
-
-    // });
 
     $('#PageRefresh').click(function() {
       location.reload();

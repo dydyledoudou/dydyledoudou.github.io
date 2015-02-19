@@ -12,7 +12,7 @@ body {
     font-size: 24px;
     word-break: break-all;
     word-wrap: break-word;
-    text-align: justify;
+    word-spacing: 15px;
   }
   p:first-letter {
     text-transform: uppercase;
@@ -30,9 +30,26 @@ body {
   width: 1280px;
   height: 720px;
   overflow: hidden;
-  background: url("../img/bg.png"), url("../img/grid.png");
-
+  background: url("../img/grid.png");
   border: 1px solid black;
+}
+.gradient {
+  display: block;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: url('../img/bg.png');
+  opacity: 0;
+
+    &.fullplayer-in {
+      opacity: 1;
+      @include transition(opacity 1s ease-out 1s);
+    }
+
+    &.fullplayer-out {
+      opacity: 0;
+      @include transition(opacity 1s ease-in 2.5s);
+    }
 }
 
 .content-container {
@@ -64,7 +81,6 @@ body {
   top: 130px;
   width: 350px;
   height: 350px;
-  border: 2px solid $light-grey;
   position: relative;
   z-index: 1000;
 
@@ -87,22 +103,28 @@ body {
     &.slide-out {
       left: calc(0% - 590px);
       @include transition-timing-function(cubic-bezier(0.55, 0.055, 0.675, 0.19));
-      @include transition-delay(1s);
+      @include transition-delay(1.5s);
       @include transition-duration(1s);
     }
   }
 }
 
 #red{
-  background-color: red;
+  background-image: url('../img/large_virgin_radio.png');
+  background-size: 100%;
+  border: 2px solid $light-grey;
 }
 
 #green{
-  background-color: green;
+  background-image: url('../img/large_france_musique.png');
+  background-size: 100%;
+  border: 2px solid $light-grey;
 }
 
 #blue{
-  background-color: blue;
+  background-image: url('../img/large_rfi_afrique.png');
+  background-size: 100%;
+  border: 2px solid $light-grey;
 }
 
 
@@ -132,24 +154,3 @@ body {
 #blue-content{
 }
 
-
-
-
-// @include keyframes(slide-in) {
-//   0% {left: 1050px;}
-//   100% {left: 0px;}
-// }
-// @include keyframes(slide-out) {
-//   0% {left: 0px;}
-//   100% {left: -590px;}
-// }
-
-// @include keyframes(fade-in) {
-//   0% {opacity: 0;}
-//   40% {opacity: 0;}
-//   100% {opacity: 1;}
-// }
-// @include keyframes(fade-out) {
-//   0% {opacity: 1;}
-//   100% {opacity: 0;}
-// }

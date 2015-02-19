@@ -5,7 +5,7 @@ body {
     font-size: 24px;
     word-break: break-all;
     word-wrap: break-word;
-    text-align: justify; }
+    word-spacing: 15px; }
   body p:first-letter {
     text-transform: uppercase; }
 
@@ -19,8 +19,26 @@ body {
   width: 1280px;
   height: 720px;
   overflow: hidden;
-  background: url("../img/bg.png"), url("../img/grid.png");
+  background: url("../img/grid.png");
   border: 1px solid black; }
+
+.gradient {
+  display: block;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: url("../img/bg.png");
+  opacity: 0; }
+  .gradient.fullplayer-in {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-out 1s;
+    -moz-transition: opacity 1s ease-out 1s;
+    transition: opacity 1s ease-out 1s; }
+  .gradient.fullplayer-out {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in 2.5s;
+    -moz-transition: opacity 1s ease-in 2.5s;
+    transition: opacity 1s ease-in 2.5s; }
 
 .content-container {
   display: block;
@@ -43,7 +61,6 @@ body {
   top: 130px;
   width: 350px;
   height: 350px;
-  border: 2px solid #cccccc;
   position: relative;
   z-index: 1000; }
   .logo-container .box {
@@ -70,21 +87,27 @@ body {
       -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
       -moz-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      -webkit-transition-delay: 1s;
-      -moz-transition-delay: 1s;
-      transition-delay: 1s;
+      -webkit-transition-delay: 1.5s;
+      -moz-transition-delay: 1.5s;
+      transition-delay: 1.5s;
       -webkit-transition-duration: 1s;
       -moz-transition-duration: 1s;
       transition-duration: 1s; }
 
 #red {
-  background-color: red; }
+  background-image: url("../img/large_virgin_radio.png");
+  background-size: 100%;
+  border: 2px solid #cccccc; }
 
 #green {
-  background-color: green; }
+  background-image: url("../img/large_france_musique.png");
+  background-size: 100%;
+  border: 2px solid #cccccc; }
 
 #blue {
-  background-color: blue; }
+  background-image: url("../img/large_rfi_afrique.png");
+  background-size: 100%;
+  border: 2px solid #cccccc; }
 
 .content-box {
   position: absolute;
