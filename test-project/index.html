@@ -6,7 +6,7 @@
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-  <div class="player-container">
+  <div class="player-container" usemap="#clic-area">
   <div class="gradient">
     <div class="logo-container">
       <section class="box" id="red" style="left:0;"></section>
@@ -30,6 +30,7 @@
 
   </div>
   </div>
+    
     <input type="button" id="start-anim" value="Play Anim">
     <input type="button" id="PageRefresh" value="Refresh">
 
@@ -47,17 +48,11 @@
 
       var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
-      // $(".player-container").css('background', 'url("./img/bg.png"), url("./img/grid.png")').addClass('fade-in');
-
       gradient.addClass('fullplayer-in');
 
       gradient.one(transEnd, function() {
         red.removeAttr('style').addClass('slide-out');
         r_content.removeAttr('style').addClass('fade-out');
-      });
-
-
-      red.one(transEnd, function() {
         green.addClass('slide-in');
         g_content.addClass('fade-in');
       });
