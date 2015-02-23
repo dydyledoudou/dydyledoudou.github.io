@@ -15,26 +15,33 @@ body {
   font-size: 25px; }
 
 .player-container {
+  z-index: 2;
+  position: absolute;
   display: block;
   width: 1280px;
   height: 720px;
-  overflow: hidden;
-  background: url("../img/grid.png");
-  border: 1px solid black; }
+  overflow: hidden; }
 
-.gradient {
+.grid-container {
+  z-index: 0;
+  width: 1280px;
+  height: 720px;
+  background: url("../img/grid.png"); }
+
+.gradient-container {
+  position: absolute;
   display: block;
   width: 1280px;
   height: 720px;
   overflow: hidden;
   background: url("../img/bg.png");
   opacity: 0; }
-  .gradient.fullplayer-in {
+  .gradient-container.fullplayer-in {
     opacity: 1;
-    -webkit-transition: opacity 1s ease-out 0.5s;
-    -moz-transition: opacity 1s ease-out 0.5s;
-    transition: opacity 1s ease-out 0.5s; }
-  .gradient.fullplayer-out {
+    -webkit-transition: opacity 2.5s ease-out;
+    -moz-transition: opacity 2.5s ease-out;
+    transition: opacity 2.5s ease-out; }
+  .gradient-container.fullplayer-out {
     opacity: 0;
     -webkit-transition: opacity 1s ease-in 2.5s;
     -moz-transition: opacity 1s ease-in 2.5s;
@@ -93,6 +100,11 @@ body {
       -webkit-transition-duration: 1s;
       -moz-transition-duration: 1s;
       transition-duration: 1s; }
+    .logo-container .box.fade-in-first-logo {
+      left: 0;
+      -webkit-transition: opacity 0.5s ease-out 2s;
+      -moz-transition: opacity 0.5s ease-out 2s;
+      transition: opacity 0.5s ease-out 2s; }
 
 #red {
   background-image: url("../img/large_virgin_radio.png");
@@ -122,3 +134,6 @@ body {
     -webkit-transition: opacity 1s ease-in 2s;
     -moz-transition: opacity 1s ease-in 2s;
     transition: opacity 1s ease-in 2s; }
+
+.fade-in-first-content {
+  opacity: 1; }

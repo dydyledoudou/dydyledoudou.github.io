@@ -6,15 +6,14 @@
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-  <div class="player-container" usemap="#clic-area">
-  <div class="gradient">
+  <div class="player-container">
     <div class="logo-container">
-      <section class="box" id="red" style="left:0;"></section>
+      <section class="box" id="red"></section>
       <section class="box" id="green"></section>
       <section class="box" id="blue"></section>
     </div>
     <div class="content-container">
-      <div class="content-box" id="red-content" style="opacity:1;">
+      <div class="content-box" id="red-content">
         <h1>Virgin Radio</h1>
         <p>La Playlist Pop, Rock, Electro</p>
       </div>
@@ -27,12 +26,12 @@
         <p>Talk and news in French for Africa</p>
       </div>
     </div>
-
   </div>
-  </div>
+  <div class="gradient-container"></div>
+  <div class="grid-container"></div>
     
-    <input type="button" id="start-anim" value="Play Anim">
-    <input type="button" id="PageRefresh" value="Refresh">
+  <input type="button" id="start-anim" value="Play Anim">
+  <input type="button" id="PageRefresh" value="Refresh">
 
   <script type="text/javascript">
     $('#start-anim').click(function() {
@@ -40,7 +39,7 @@
       var red = $('#red');
       var green = $('#green');
       var blue = $('#blue');
-      var gradient = $('.gradient');
+      var gradient = $('.gradient-container');
 
       var r_content = $('#red-content');
       var g_content = $('#green-content');
@@ -49,13 +48,16 @@
       var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
       gradient.addClass('fullplayer-in');
+      red.addClass('fade-in-first-logo');
+      r_content.addClass('fade-in-first-content');
 
       gradient.one(transEnd, function() {
-        red.removeAttr('style').addClass('slide-out');
-        r_content.removeAttr('style').addClass('fade-out');
+        red.removeClass('fade-in-first-logo').addClass('slide-out');
+        r_content.removeClass('fade-in-first-content').addClass('fade-out');
         green.addClass('slide-in');
         g_content.addClass('fade-in');
       });
+
       green.one(transEnd, function() {
         red.removeClass('slide-out');
         r_content.removeClass('fade-out');
