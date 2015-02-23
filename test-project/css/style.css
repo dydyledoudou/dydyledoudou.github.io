@@ -31,9 +31,9 @@ body {
   opacity: 0; }
   .gradient.fullplayer-in {
     opacity: 1;
-    -webkit-transition: opacity 1s ease-out 1s;
-    -moz-transition: opacity 1s ease-out 1s;
-    transition: opacity 1s ease-out 1s; }
+    -webkit-transition: opacity 1s ease-out 0.5s;
+    -moz-transition: opacity 1s ease-out 0.5s;
+    transition: opacity 1s ease-out 0.5s; }
   .gradient.fullplayer-out {
     opacity: 0;
     -webkit-transition: opacity 1s ease-in 2.5s;
