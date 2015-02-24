@@ -112,14 +112,17 @@ body {
 
     &.slide-out {
       left: calc(0% - 590px);
+      opacity: 1;
       @include transition-timing-function(cubic-bezier(0.55, 0.055, 0.675, 0.19));
       @include transition-delay(1.5s);
       @include transition-duration(1s);
     }
 
-    &.fade-in-first-logo {
-      left: 0;
-      @include transition(opacity 0.5s ease-out 2.0s);
+    
+
+    &.fade-in {
+      opacity: 1;
+      @include transition(opacity 1s ease-out 3.5s);
     }
   }
 }
@@ -128,6 +131,16 @@ body {
   background-image: url('../img/large_virgin_radio.png');
   background-size: 100%;
   border: 2px solid $light-grey;
+  opacity: 0;
+
+  &.fade-in-first-logo {
+    left: 0;
+    opacity: 1;
+    @include transition(opacity 0.5s ease-out 1.5s);
+  }
+  &.out-logo {
+    opacity: 1;
+  }
 }
 
 #green{
@@ -161,6 +174,10 @@ body {
 }
 
 #red-content {
+  &.fade-in-first-content {
+    opacity: 1;
+    @include transition(opacity 0.5s ease-out 1.5s);
+  }
 }
 
 #green-content{
@@ -171,4 +188,5 @@ body {
 
 .fade-in-first-content {
   opacity: 1;
+  @include transition(opacity 0.5s ease-out 1.5s);
 }

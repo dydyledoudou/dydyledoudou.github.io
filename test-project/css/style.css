@@ -91,6 +91,7 @@ body {
       transition-duration: 2s; }
     .logo-container .box.slide-out {
       left: calc(0% - 590px);
+      opacity: 1;
       -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
       -moz-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -100,16 +101,25 @@ body {
       -webkit-transition-duration: 1s;
       -moz-transition-duration: 1s;
       transition-duration: 1s; }
-    .logo-container .box.fade-in-first-logo {
-      left: 0;
-      -webkit-transition: opacity 0.5s ease-out 2s;
-      -moz-transition: opacity 0.5s ease-out 2s;
-      transition: opacity 0.5s ease-out 2s; }
+    .logo-container .box.fade-in {
+      opacity: 1;
+      -webkit-transition: opacity 1s ease-out 3.5s;
+      -moz-transition: opacity 1s ease-out 3.5s;
+      transition: opacity 1s ease-out 3.5s; }
 
 #red {
   background-image: url("../img/large_virgin_radio.png");
   background-size: 100%;
-  border: 2px solid #cccccc; }
+  border: 2px solid #cccccc;
+  opacity: 0; }
+  #red.fade-in-first-logo {
+    left: 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-out 1.5s;
+    -moz-transition: opacity 0.5s ease-out 1.5s;
+    transition: opacity 0.5s ease-out 1.5s; }
+  #red.out-logo {
+    opacity: 1; }
 
 #green {
   background-image: url("../img/large_france_musique.png");
@@ -135,5 +145,14 @@ body {
     -moz-transition: opacity 1s ease-in 2s;
     transition: opacity 1s ease-in 2s; }
 
+#red-content.fade-in-first-content {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-out 1.5s;
+  -moz-transition: opacity 0.5s ease-out 1.5s;
+  transition: opacity 0.5s ease-out 1.5s; }
+
 .fade-in-first-content {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-out 1.5s;
+  -moz-transition: opacity 0.5s ease-out 1.5s;
+  transition: opacity 0.5s ease-out 1.5s; }
