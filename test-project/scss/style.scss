@@ -58,8 +58,18 @@ body {
 
   &.fullplayer-out {
     opacity: 0;
-    @include transition(opacity 1s ease-in 2.5s);
+    @include transition(opacity 1s ease-in 3s);
   }
+}
+
+.invisible-button {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  left: 664px;
+  top: 123px;
+  z-index: 100;
 }
 
 .content-container {

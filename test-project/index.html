@@ -6,6 +6,7 @@
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+  <div class="invisible-button anim"></div>
   <div class="player-container">
     <div class="logo-container">
       <section class="box" id="red"></section>
@@ -30,11 +31,11 @@
   <div class="gradient-container"></div>
   <div class="grid-container"></div>
     
-  <input type="button" id="start-anim" value="Play Anim">
+  <input type="button" id="start-anim" class="anim" value="Play Anim">
   <input type="button" id="PageRefresh" value="Refresh">
 
   <script type="text/javascript">
-    $('#start-anim').click(function() {
+    $('.anim').click(function() {
 
       var red = $('#red');
       var green = $('#green');
