@@ -1,0 +1,85 @@
+@import 'bourbon';
+
+$dark-grey: #444444;
+$light-grey: #cccccc;
+$wsize : 400px;
+$hsize : 400px;
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  p {
+    color: #ffffff;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin: 20px;
+    text-align: center;
+  }
+  p:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.fullplayer {
+  z-index: 0;
+  width: 1280px;
+  height: 720px;
+  background: url("../img/full_screen.png");
+}
+
+.artwork-container {
+  position: absolute;
+  width: $wsize;
+  height: $hsize;
+  top: 140px;
+  left: 448px;
+  z-index: 3;
+
+  &.artwork-fade-in {
+    background-color: #1990db;
+    opacity: 0.7;
+    @include transition(opacity 0.5s ease-out);
+  }
+  &.artwork-fade-out {
+    background-color: #1990db;
+    opacity: 0;
+    @include transition(opacity 0.5s ease-in);
+  }
+}
+
+.gradient-container {
+  position: absolute;
+  display: block;
+  width: $wsize;
+  height: $hsize;
+  background: url('../img/gradient.png');
+  z-index: 1;
+  top: 140px;
+  left: 448px;
+
+  &.gradient-fade-in {
+    opacity: 1;
+    @include transition(opacity 0.25s ease-out);
+  }
+  &.gradient-fade-out {
+    opacity: 0;
+    @include transition(opacity 0.25s ease-in);
+  }
+}
+
+.content {
+  position: absolute;
+  display: block;
+  width: $wsize;
+  top: 140px;
+  left: 448px;
+  z-index: 4;
+
+  &.content-slide-down {
+    top: 300px;
+    @include transition(top 0.75s ease-out);
+  }
+  &.content-slide-up {
+    top: 140px;
+    @include transition(top 0.75s ease-in);
+  }
+}

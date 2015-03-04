@@ -1,0 +1,74 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif; }
+  body p {
+    color: #ffffff;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin: 20px;
+    text-align: center; }
+  body p:first-letter {
+    text-transform: uppercase; }
+
+.fullplayer {
+  z-index: 0;
+  width: 1280px;
+  height: 720px;
+  background: url("../img/full_screen.png"); }
+
+.artwork-container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 140px;
+  left: 448px;
+  z-index: 3; }
+  .artwork-container.artwork-fade-in {
+    background-color: #1990db;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out; }
+  .artwork-container.artwork-fade-out {
+    background-color: #1990db;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in; }
+
+.gradient-container {
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 400px;
+  background: url("../img/gradient.png");
+  z-index: 1;
+  top: 140px;
+  left: 448px; }
+  .gradient-container.gradient-fade-in {
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease-out;
+    -moz-transition: opacity 0.25s ease-out;
+    transition: opacity 0.25s ease-out; }
+  .gradient-container.gradient-fade-out {
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease-in;
+    -moz-transition: opacity 0.25s ease-in;
+    transition: opacity 0.25s ease-in; }
+
+.content {
+  position: absolute;
+  display: block;
+  width: 400px;
+  top: 140px;
+  left: 448px;
+  z-index: 4; }
+  .content.content-slide-down {
+    top: 300px;
+    -webkit-transition: top 0.75s ease-out;
+    -moz-transition: top 0.75s ease-out;
+    transition: top 0.75s ease-out; }
+  .content.content-slide-up {
+    top: 140px;
+    -webkit-transition: top 0.75s ease-in;
+    -moz-transition: top 0.75s ease-in;
+    transition: top 0.75s ease-in; }

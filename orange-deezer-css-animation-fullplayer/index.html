@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Animation Deezer fullscreen</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <div class="fullplayer">
+    <div class="artwork-container anim"></div>
+    <div class="gradient-container"></div>
+    <div class="content anim">
+      <p>Votre écoute est limitée à 30 secondes. Abonnez-vous pour enlever cette limitation</p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    var artwork = $('.artwork-container');
+    var gradient = $('.gradient-container');
+    var text = $('.content');
+
+    var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+    $('.anim').mouseenter(function() {
+
+      gradient.addClass('gradient-fade-out');
+      artwork.addClass('artwork-fade-in');
+      text.addClass('content-slide-down');
+
+      gradient.removeClass('gradient-fade-in');
+      artwork.removeClass('artwork-fade-out');
+      text.removeClass('content-slide-up');
+
+    });
+
+    $('.anim').mouseleave(function() {
+
+      gradient.addClass('gradient-fade-in');
+      artwork.addClass('artwork-fade-out');
+      text.addClass('content-slide-up');
+
+      gradient.removeClass('gradient-fade-out');
+      artwork.removeClass('artwork-fade-in');
+      text.removeClass('content-slide-down');
+
+    });
+
+    $('#PageRefresh').click(function() {
+      location.reload();
+    });
+
+</script>
+</body>
+</html>
