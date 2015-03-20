@@ -1,0 +1,46 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif; }
+  body p {
+    color: #ffffff;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin: 20px;
+    text-align: center; }
+  body p:first-letter {
+    text-transform: uppercase; }
+
+.fullplayer {
+  z-index: 0;
+  width: 1280px;
+  height: 720px;
+  background: url("../img/full_screen.png"); }
+
+.artwork-container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 140px;
+  left: 448px;
+  z-index: 3; }
+
+.content {
+  position: absolute;
+  display: block;
+  width: 400px;
+  top: 140px;
+  left: 448px;
+  z-index: 4; }
+
+.micro {
+  position: absolute;
+  top: 644px;
+  left: 947px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url("../img/sprite.png") 0 0 no-repeat; }
+  .micro:hover {
+    background-position: 0 -36px;
+    cursor: pointer; }
+  .micro:active, .micro :visited {
+    background-position: 0 -72px; }
