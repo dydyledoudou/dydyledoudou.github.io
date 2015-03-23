@@ -31,16 +31,27 @@ body {
   left: 448px;
   z-index: 4; }
 
-.micro {
+.micro-off, .micro-on {
   position: absolute;
   top: 644px;
   left: 947px;
   display: block;
   width: 36px;
-  height: 36px;
+  height: 36px; }
+
+.micro-off {
   background: url("../img/sprite.png") 0 0 no-repeat; }
-  .micro:hover {
+  .micro-off:hover {
     background-position: 0 -36px;
     cursor: pointer; }
-  .micro:active, .micro :visited {
+  .micro-off:active {
     background-position: 0 -72px; }
+
+.micro-on {
+  background: url("../img/sprite.png") 0 -72px no-repeat;
+  display: none; }
+  .micro-on:hover {
+    background-position: 0 -108px;
+    cursor: pointer; }
+  .micro-on:active {
+    background-position: 0 0px; }

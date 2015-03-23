@@ -10,11 +10,25 @@
     <div class="artwork-container anim"></div>
     <div class="content anim">
     </div>
-    <div class="micro">
+    <div class="micro-off">
+    </div>
+    <div class="micro-on">
     </div>
   </div>
 
   <script type="text/javascript">
+    var lyricsOff = $('.micro-off');
+    var lyricsOn = $('.micro-on');
+
+    lyricsOff.click(function(){
+      lyricsOff.css("display", "none");
+      lyricsOn.css("display", "block");
+    });
+
+    lyricsOn.click(function(){
+      lyricsOn.css("display", "none");
+      lyricsOff.css("display", "block");
+    });
 
 </script>
 </body>
