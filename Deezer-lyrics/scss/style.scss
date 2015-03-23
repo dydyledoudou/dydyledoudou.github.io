@@ -33,6 +33,16 @@ body {
   top: 140px;
   left: 448px;
   z-index: 3;
+  background: url('../img/artwork.png');
+
+  &.artwork-fade-in {
+    opacity: 1;
+    @include transition(opacity 0.5s ease-out);
+  }
+  &.artwork-fade-out {
+    opacity: 0;
+    @include transition(opacity 0.5s ease-in);
+  }
 }
 
 .content {

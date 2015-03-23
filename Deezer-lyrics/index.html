@@ -19,15 +19,22 @@
   <script type="text/javascript">
     var lyricsOff = $('.micro-off');
     var lyricsOn = $('.micro-on');
+    var cover = $('.artwork-container');
+
+    var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
     lyricsOff.click(function(){
       lyricsOff.css("display", "none");
       lyricsOn.css("display", "block");
+      cover.addClass("artwork-fade-out");
+      cover.removeClass("artwork-fade-in");
     });
 
     lyricsOn.click(function(){
       lyricsOn.css("display", "none");
       lyricsOff.css("display", "block");
+      cover.addClass("artwork-fade-in");
+      cover.removeClass("artwork-fade-out");
     });
 
 </script>
