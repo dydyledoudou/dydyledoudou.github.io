@@ -11,7 +11,6 @@ body {
     color: #ffffff;
     font-size: 18px;
     word-wrap: break-word;
-    margin: 20px;
     text-align: center;
   }
   p:first-letter {
@@ -48,8 +47,7 @@ body {
 .lyrics-container {
   position: absolute;
   opacity: 0;
-  width: $wsize;
-  top: 120px;
+  top: 200px;
   left: 70px;
 
   &.lyrics-fade-in {
@@ -64,10 +62,19 @@ body {
 
 .current-line {
   width: 1090px;
-  height: 110px;
   padding: 25px;
-  background-color: #1990db;
-  opacity: 0.6;
+  font-size: 60px;
+  line-height: 60px;
+  background-color: rgba(#1990db, 0.6);
+  margin: 0 auto 40px;
+}
+
+.second-line {
+  width: 900px;
+  padding: 25px;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0 auto;
 }
 
 .micro-off, .micro-on{
