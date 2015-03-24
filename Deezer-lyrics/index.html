@@ -8,7 +8,10 @@
 <body>
   <div class="fullplayer">
     <div class="artwork-container anim"></div>
-    <div class="content anim">
+    <div class="lyrics-container anim">
+      <div class="current-line">
+        
+      </div>
     </div>
     <div class="micro-off">
     </div>
@@ -17,26 +20,44 @@
   </div>
 
   <script type="text/javascript">
-    var lyricsOff = $('.micro-off');
-    var lyricsOn = $('.micro-on');
-    var cover = $('.artwork-container');
+    $( document ).ready(function() {
+      var lyricsOff = $('.micro-off');
+      var lyricsOn = $('.micro-on');
+      var cover = $('.artwork-container');
+      var lyrics = $('.lyrics-container');
 
-    var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+      var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
-    lyricsOff.click(function(){
-      lyricsOff.css("display", "none");
-      lyricsOn.css("display", "block");
-      cover.addClass("artwork-fade-out");
-      cover.removeClass("artwork-fade-in");
+      lyricsOff.click(function(){
+        lyricsOff.css("display", "none"); // Disparition icone off-mode
+        lyricsOn.css("display", "block"); // Apparition icone on-mode
+        cover.addClass("artwork-fade-out");
+
+        cover.one(transEnd, function() {
+          lyrics.addClass("lyrics-fade-in");
+          cover.removeClass("artwork-fade-in");
+          $( this ).off(transEnd);
+        });
+      });
+      
+
+      lyricsOn.click(function(){
+        lyricsOn.css("display", "none"); // Disparition icone on-mode
+        lyricsOff.css("display", "block"); // Apparition icone off-mode
+        lyrics.addClass("lyrics-fade-out");
+        lyrics.removeClass("lyrics-fade-in");
+        
+        
+        lyrics.one(transEnd, function() {
+          cover.addClass("artwork-fade-in");
+          cover.removeClass("artwork-fade-out");
+          lyrics.removeClass("lyrics-fade-out");
+          $( this ).off(transEnd);
+        });
+      });
+      
+
     });
-
-    lyricsOn.click(function(){
-      lyricsOn.css("display", "none");
-      lyricsOff.css("display", "block");
-      cover.addClass("artwork-fade-in");
-      cover.removeClass("artwork-fade-out");
-    });
-
 </script>
 </body>
 </html>

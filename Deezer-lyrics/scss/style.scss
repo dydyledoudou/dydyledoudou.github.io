@@ -37,7 +37,7 @@ body {
 
   &.artwork-fade-in {
     opacity: 1;
-    @include transition(opacity 0.5s ease-out);
+    @include transition(opacity 1.5s ease-out);
   }
   &.artwork-fade-out {
     opacity: 0;
@@ -45,13 +45,29 @@ body {
   }
 }
 
-.content {
+.lyrics-container {
   position: absolute;
-  display: block;
+  opacity: 0;
   width: $wsize;
-  top: 140px;
-  left: 448px;
-  z-index: 4;
+  top: 120px;
+  left: 70px;
+
+  &.lyrics-fade-in {
+    opacity: 1;
+    @include transition(opacity 0.5s ease-out);
+  }
+  &.lyrics-fade-out {
+    opacity: 0;
+    @include transition(opacity 0.5s ease-in);
+  }
+}
+
+.current-line {
+  width: 1090px;
+  height: 110px;
+  padding: 25px;
+  background-color: #1990db;
+  opacity: 0.6;
 }
 
 .micro-off, .micro-on{

@@ -25,22 +25,38 @@ body {
   background: url("../img/artwork.png"); }
   .artwork-container.artwork-fade-in {
     opacity: 1;
-    -webkit-transition: opacity 0.5s ease-out;
-    -moz-transition: opacity 0.5s ease-out;
-    transition: opacity 0.5s ease-out; }
+    -webkit-transition: opacity 1.5s ease-out;
+    -moz-transition: opacity 1.5s ease-out;
+    transition: opacity 1.5s ease-out; }
   .artwork-container.artwork-fade-out {
     opacity: 0;
     -webkit-transition: opacity 0.5s ease-in;
     -moz-transition: opacity 0.5s ease-in;
     transition: opacity 0.5s ease-in; }
 
-.content {
+.lyrics-container {
   position: absolute;
-  display: block;
+  opacity: 0;
   width: 400px;
-  top: 140px;
-  left: 448px;
-  z-index: 4; }
+  top: 120px;
+  left: 70px; }
+  .lyrics-container.lyrics-fade-in {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out; }
+  .lyrics-container.lyrics-fade-out {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in; }
+
+.current-line {
+  width: 1090px;
+  height: 110px;
+  padding: 25px;
+  background-color: #1990db;
+  opacity: 0.6; }
 
 .micro-off, .micro-on {
   position: absolute;
