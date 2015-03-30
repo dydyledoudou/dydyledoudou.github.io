@@ -35,7 +35,6 @@ body {
 
 .lyrics-container {
   position: absolute;
-  opacity: 0;
   top: 200px;
   left: 70px; }
   .lyrics-container.lyrics-fade-in {
@@ -49,21 +48,44 @@ body {
     -moz-transition: opacity 0.5s ease-in;
     transition: opacity 0.5s ease-in; }
 
-.current-line {
+.lyrics-default {
+  top: 200px;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 1090px;
-  padding: 25px;
-  font-size: 60px;
-  line-height: 60px;
-  background-color: rgba(25, 144, 219, 0.6);
-  margin: 0 auto 40px; }
+  padding: 25px 95px !important;
+  margin: 0 auto; }
 
-.second-line {
-  width: 900px;
+.current-line {
+  top: 0 !important;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  width: 1090px;
   padding: 25px;
   font-size: 50px;
   line-height: 50px;
-  margin: 0 auto;
-  opacity: 0.8; }
+  background-color: rgba(25, 144, 219, 0.6); }
+  .current-line.finished {
+    opacity: 0;
+    top: -50px !important;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out; }
+
+.second-line {
+  opacity: 0.8;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  font-size: 50px;
+  line-height: 50px; }
 
 .unvisible-lines {
   opacity: 0; }

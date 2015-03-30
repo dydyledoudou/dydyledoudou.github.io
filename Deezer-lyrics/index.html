@@ -7,19 +7,19 @@
 </head>
 <body>
   <div class="fullplayer">
-    <div class="artwork-container anim"></div>
+
     <div class="lyrics-container anim">
-        <p class="current-line" id"1">Anyway the wind blows doesn't really matter to me, to me.</p>
-        <p class="second-line" id"2">Mama, just killed a man</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-1">Anyway the wind blows doesn't really matter to me, to me.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-2">Mama, just killed a man</p>
 
-        <p class="unvisible-lines" id"3">Oh, mama mia, mama mia (Mama mia, let me go.)</p>
-        <p class="unvisible-lines" id"4">Beelzebub has a devil put aside for me, for me, for me.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-3">Oh, mama mia, mama mia (Mama mia, let me go.)</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-4">Beelzebub has a devil put aside for me, for me, for me.</p>
 
-        <p class="unvisible-lines" id"5">Too late, my time has come,</p>
-        <p class="unvisible-lines" id"6">Sent shivers down my spine,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-5">Too late, my time has come,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-6">Sent shivers down my spine,</p>
 
-        <p class="unvisible-lines" id"7">I see a little silhouetto of a man,</p>
-        <p class="unvisible-lines" id"8">Scaramouche, Scaramouche, will you do the Fandango?</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-7">I see a little silhouetto of a man,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-8">Scaramouche, Scaramouche, will you do the Fandango?</p>
     </div>
     <div class="micro-off">
     </div>
@@ -29,40 +29,135 @@
 
   <script type="text/javascript">
     $( document ).ready(function() {
-      var lyricsOff = $('.micro-off');
-      var lyricsOn = $('.micro-on');
-      var cover = $('.artwork-container');
-      var lyrics = $('.lyrics-container');
 
-      var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+      var ID1 = $('#lyrics-1');
+      var ID2 = $('#lyrics-2');
+      var ID3 = $('#lyrics-3');
+      var ID4 = $('#lyrics-4');
+      var ID5 = $('#lyrics-5');
+      var ID6 = $('#lyrics-6');
+      var ID7 = $('#lyrics-7');
+      var ID8 = $('#lyrics-8');
 
-      lyricsOff.click(function(){
-        lyricsOff.css("display", "none"); // Disparition icone off-mode
-        lyricsOn.css("display", "block"); // Apparition icone on-mode
-        cover.addClass("artwork-fade-out");
 
-        cover.one(transEnd, function() {
-          lyrics.addClass("lyrics-fade-in");
-          cover.removeClass("artwork-fade-in");
-          $( this ).off(transEnd);
-        });
-      });
+      window.setTimeout(function() {
+        ID1.removeClass("unvisible-lines").addClass("second-line");
+      }, 2000);
+      window.setTimeout(function() {
+        ID1.removeClass("second-line").addClass("current-line");
+      }, 4000);
+      window.setTimeout(function() {
+        ID1.addClass("finished");
+      }, 6500);
+
+      window.setTimeout(function() {
+        ID2.removeClass("unvisible-lines").addClass("second-line");
+      }, 5000);
+      window.setTimeout(function() {
+        ID2.removeClass("second-line").addClass("current-line");
+      }, 7000);
+      window.setTimeout(function() {
+        ID2.addClass("finished");
+      }, 9500);
+
+      window.setTimeout(function() {
+        ID3.removeClass("unvisible-lines").addClass("second-line");
+      }, 8000);
+      window.setTimeout(function() {
+        ID3.removeClass("second-line").addClass("current-line");
+      }, 10000);
+      window.setTimeout(function() {
+        ID3.addClass("finished");
+      }, 12500);
+
+      window.setTimeout(function() {
+        ID4.removeClass("unvisible-lines").addClass("second-line");
+      }, 11000);
+      window.setTimeout(function() {
+        ID4.removeClass("second-line").addClass("current-line");
+      }, 13000);
+      window.setTimeout(function() {
+        ID4.addClass("finished");
+      }, 15500);
+
+      window.setTimeout(function() {
+        ID5.removeClass("unvisible-lines").addClass("second-line");
+      }, 14000);
+      window.setTimeout(function() {
+        ID5.removeClass("second-line").addClass("current-line");
+      }, 16000);
+      window.setTimeout(function() {
+        ID5.addClass("finished");
+      }, 18500);
+
+      window.setTimeout(function() {
+        ID6.removeClass("unvisible-lines").addClass("second-line");
+      }, 17000);
+      window.setTimeout(function() {
+        ID6.removeClass("second-line").addClass("current-line");
+      }, 19000);
+      window.setTimeout(function() {
+        ID6.addClass("finished");
+      }, 21500);
+
+      window.setTimeout(function() {
+        ID7.removeClass("unvisible-lines").addClass("second-line");
+      }, 20000);
+      window.setTimeout(function() {
+        ID7.removeClass("second-line").addClass("current-line");
+      }, 22000);
+      window.setTimeout(function() {
+        ID7.addClass("finished");
+      }, 24500);
+
+      window.setTimeout(function() {
+        ID8.removeClass("unvisible-lines").addClass("second-line");
+      }, 23000);
+      window.setTimeout(function() {
+        ID8.removeClass("second-line").addClass("current-line");
+      }, 25000);
+      window.setTimeout(function() {
+        ID8.addClass("finished");
+      }, 27500);
+
+      // var lyricsOff = $('.micro-off');
+      // var lyricsOn = $('.micro-on');
+      // var cover = $('.artwork-container');
+      // var lyrics = $('.lyrics-container');
+
+      // var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+      // // From here
+
+      // lyricsOff.click(function(){
+      //   lyricsOff.css("display", "none"); // Disparition icone off-mode
+      //   lyricsOn.css("display", "block"); // Apparition icone on-mode
+      //   cover.addClass("artwork-fade-out");
+
+      //   cover.one(transEnd, function() {
+      //     lyrics.addClass("lyrics-fade-in");
+      //     cover.removeClass("artwork-fade-in");
+      //     $( this ).off(transEnd);
+      //   });
+      // });
       
 
-      lyricsOn.click(function(){
-        lyricsOn.css("display", "none"); // Disparition icone on-mode
-        lyricsOff.css("display", "block"); // Apparition icone off-mode
-        lyrics.addClass("lyrics-fade-out");
-        lyrics.removeClass("lyrics-fade-in");
+      // lyricsOn.click(function(){
+      //   lyricsOn.css("display", "none"); // Disparition icone on-mode
+      //   lyricsOff.css("display", "block"); // Apparition icone off-mode
+      //   lyrics.addClass("lyrics-fade-out");
+      //   lyrics.removeClass("lyrics-fade-in");
         
         
-        lyrics.one(transEnd, function() {
-          cover.addClass("artwork-fade-in");
-          cover.removeClass("artwork-fade-out");
-          lyrics.removeClass("lyrics-fade-out");
-          $( this ).off(transEnd);
-        });
-      });
+      //   lyrics.one(transEnd, function() {
+      //     cover.addClass("artwork-fade-in");
+      //     cover.removeClass("artwork-fade-out");
+      //     lyrics.removeClass("lyrics-fade-out");
+      //     $( this ).off(transEnd);
+      //   });
+      // });
+
+      // to here : code to switch from one mode to an other
       
 
     });
