@@ -1,0 +1,664 @@
+<html>
+<head>
+  <title>Animation Deezer fullscreen</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <div class="fullplayer">
+    <div class="artwork-container"></div>
+    <div class="lyrics-container anim">
+        <p class="unvisible-lines lyrics-default" id="lyrics-1">Is this the real life?</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-2">Is this just fantasy?</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-3">Caught in a landslide,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-4">No escape from reality.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-5">Open your eyes,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-6">Look up to the skies and see,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-7">I'm just a poor boy, I need no sympathy,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-8">Because I'm easy come, easy go,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-9">Little high, little low,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-10">Anyway the wind blows doesn't really matter to me, to me.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-11">Mama, just killed a man,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-12">Put a gun against his head,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-13">Pulled my trigger, now he's dead.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-14">Mama, life had just begun,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-15">But now I've gone and thrown it all away.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-16">Mama, ooh,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-17">Didn't mean to make you cry,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-18">If I'm not back again this time tomorrow,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-19">Carry on, carry on as if nothing really matters.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-20">Too late, my time has come,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-21">Sent shivers down my spine,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-22">Body's aching all the time.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-23">Goodbye, everybody, I've got to go,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-24">Gotta leave you all behind and face the truth.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-25">Mama, ooh (anyway the wind blows),</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-26">I don't wanna die,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-27">I sometimes wish I'd never been born at all.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-28">I see a little silhouetto of a man,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-29">Scaramouche, Scaramouche, will you do the Fandango?</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-30">Thunderbolt and lightning,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-31">Very, very frightening me.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-32">(Galileo) Galileo.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-33">(Galileo) Galileo,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-34">Galileo Figaro</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-35">Magnifico.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-36">I'm just a poor boy, nobody loves me./p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-37">He's just a poor boy from a poor family,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-38">Spare him his life from this monstrosity.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-39">Easy come, easy go, will you let me go?</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-40">Bismillah! No, we will not let you go. (Let him go!)</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-41">Bismillah! We will not let you go. (Let him go!)</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-42">Bismillah! We will not let you go. (Let me go!)</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-43">Will not let you go. (Let me go!)</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-44">Never, never let you go</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-45">Never let me go, oh.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-46">No, no, no, no, no, no, no.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-47">Oh, mama mia, mama mia (Mama mia, let me go.)</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-48">Beelzebub has a devil put aside for me, for me, for me.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-49">So you think you can stone me and spit in my eye?</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-50">So you think you can love me and leave me to die?</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-51">Oh, baby, can't do this to me, baby,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-52">Just gotta get out, just gotta get right outta here.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-53">(Oh, yeah, oh yeah)</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-54">Nothing really matters,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-55">Anyone can see,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-56">Nothing really matters,</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-57">Nothing really matters to me.</p>
+        <p class="unvisible-lines lyrics-default" id="lyrics-58">Anyway the wind blows.</p>
+
+    </div>
+    <div class="micro-off">
+    </div>
+    <div class="micro-on">
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $( document ).ready(function() {
+
+      var ID1 = $('#lyrics-1');
+      var ID2 = $('#lyrics-2');
+      var ID3 = $('#lyrics-3');
+      var ID4 = $('#lyrics-4');
+      var ID5 = $('#lyrics-5');
+      var ID6 = $('#lyrics-6');
+      var ID7 = $('#lyrics-7');
+      var ID8 = $('#lyrics-8');
+      var ID9 = $('#lyrics-9');
+      var ID10 = $('#lyrics-10');
+      var ID11 = $('#lyrics-11');
+      var ID12 = $('#lyrics-12');
+      var ID13 = $('#lyrics-13');
+      var ID14 = $('#lyrics-14');
+      var ID15 = $('#lyrics-15');
+      var ID16 = $('#lyrics-16');
+      var ID17 = $('#lyrics-17');
+      var ID18 = $('#lyrics-18');
+      var ID19 = $('#lyrics-19');
+      var ID20 = $('#lyrics-20');
+      var ID21 = $('#lyrics-21');
+      var ID22 = $('#lyrics-22');
+      var ID23 = $('#lyrics-23');
+      var ID24 = $('#lyrics-24');
+      var ID25 = $('#lyrics-25');
+      var ID26 = $('#lyrics-26');
+      var ID27 = $('#lyrics-27');
+      var ID28 = $('#lyrics-28');
+      var ID29 = $('#lyrics-29');
+      var ID30 = $('#lyrics-30');
+      var ID31 = $('#lyrics-31');
+      var ID32 = $('#lyrics-32');
+      var ID33 = $('#lyrics-33');
+      var ID34 = $('#lyrics-34');
+      var ID35 = $('#lyrics-35');
+      var ID36 = $('#lyrics-36');
+      var ID37 = $('#lyrics-37');
+      var ID38 = $('#lyrics-38');
+      var ID39 = $('#lyrics-39');
+      var ID40 = $('#lyrics-40');
+      var ID41 = $('#lyrics-41');
+      var ID42 = $('#lyrics-42');
+      var ID43 = $('#lyrics-43');
+      var ID44 = $('#lyrics-44');
+      var ID45 = $('#lyrics-45');
+      var ID46 = $('#lyrics-46');
+      var ID47 = $('#lyrics-47');
+      var ID48 = $('#lyrics-48');
+      var ID49 = $('#lyrics-49');
+      var ID50 = $('#lyrics-50');
+      var ID51 = $('#lyrics-51');
+      var ID52 = $('#lyrics-52');
+      var ID53 = $('#lyrics-53');
+      var ID54 = $('#lyrics-54');
+      var ID55 = $('#lyrics-55');
+      var ID56 = $('#lyrics-56');
+      var ID57 = $('#lyrics-57');
+      var ID58 = $('#lyrics-58');
+
+
+      var lyricsOff = $('.micro-off');
+      var lyricsOn = $('.micro-on');
+      var cover = $('.artwork-container');
+      var lyrics = $('.lyrics-container');
+
+      var transEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+      lyricsOff.click(function() {
+        window.setTimeout(function() {
+          ID1.removeClass("unvisible-lines").addClass("second-line");
+        }, 0);
+        window.setTimeout(function() {
+          ID1.removeClass("second-line").addClass("current-line");
+        }, 400);
+
+        window.setTimeout(function() {
+          ID2.removeClass("unvisible-lines").addClass("second-line");
+        }, 400);
+        window.setTimeout(function() {
+          ID2.removeClass("second-line").addClass("current-line");
+          ID1.addClass("finished");
+        }, 4650);
+
+        window.setTimeout(function() {
+          ID3.removeClass("unvisible-lines").addClass("second-line");
+        }, 4650);
+        window.setTimeout(function() {
+          ID3.removeClass("second-line").addClass("current-line");
+          ID2.addClass("finished");
+        }, 8040);
+
+        window.setTimeout(function() {
+          ID4.removeClass("unvisible-lines").addClass("second-line");
+        }, 8040);
+        window.setTimeout(function() {
+          ID4.removeClass("second-line").addClass("current-line");
+          ID3.addClass("finished");
+        }, 10960);
+
+        window.setTimeout(function() {
+          ID5.removeClass("unvisible-lines").addClass("second-line");
+        }, 10960);
+        window.setTimeout(function() {
+          ID5.removeClass("second-line").addClass("current-line");
+          ID4.addClass("finished");
+        }, 15600);
+
+        window.setTimeout(function() {
+          ID6.removeClass("unvisible-lines").addClass("second-line");
+        }, 15600);
+        window.setTimeout(function() {
+          ID6.removeClass("second-line").addClass("current-line");
+          ID5.addClass("finished");
+        }, 18580);
+
+        window.setTimeout(function() {
+          ID7.removeClass("unvisible-lines").addClass("second-line");
+        }, 18580);
+        window.setTimeout(function() {
+          ID7.removeClass("second-line").addClass("current-line");
+          ID6.addClass("finished");
+        }, 25860);
+
+        window.setTimeout(function() {
+          ID8.removeClass("unvisible-lines").addClass("second-line");
+        }, 25860);
+        window.setTimeout(function() {
+          ID8.removeClass("second-line").addClass("current-line");
+          ID7.addClass("finished");
+        }, 31460);
+
+        window.setTimeout(function() {
+          ID9.removeClass("unvisible-lines").addClass("second-line");
+        }, 31460);
+        window.setTimeout(function() {
+          ID9.removeClass("second-line").addClass("current-line");
+          ID8.addClass("finished");
+        }, 35860);
+
+        window.setTimeout(function() {
+          ID10.removeClass("unvisible-lines").addClass("second-line");
+        }, 35860);
+        window.setTimeout(function() {
+          ID10.removeClass("second-line").addClass("current-line");
+          ID9.addClass("finished");
+        }, 39260);
+
+        window.setTimeout(function() {
+          ID11.removeClass("unvisible-lines").addClass("second-line");
+        }, 39260);
+        window.setTimeout(function() {
+          ID11.removeClass("second-line").addClass("current-line");
+          ID10.addClass("finished");
+        }, 56250);
+
+        window.setTimeout(function() {
+          ID12.removeClass("unvisible-lines").addClass("second-line");
+        }, 56250);
+        window.setTimeout(function() {
+          ID12.removeClass("second-line").addClass("current-line");
+          ID11.addClass("finished");
+        }, 62600);
+
+        window.setTimeout(function() {
+          ID13.removeClass("unvisible-lines").addClass("second-line");
+        }, 62600);
+        window.setTimeout(function() {
+          ID13.removeClass("second-line").addClass("current-line");
+          ID12.addClass("finished");
+        }, 66050);
+
+        window.setTimeout(function() {
+          ID14.removeClass("unvisible-lines").addClass("second-line");
+        }, 66050);
+        window.setTimeout(function() {
+          ID14.removeClass("second-line").addClass("current-line");
+          ID13.addClass("finished");
+        }, 69770);
+
+        window.setTimeout(function() {
+          ID15.removeClass("unvisible-lines").addClass("second-line");
+        }, 69770);
+        window.setTimeout(function() {
+          ID15.removeClass("second-line").addClass("current-line");
+          ID14.addClass("finished");
+        }, 76090);
+
+        window.setTimeout(function() {
+          ID16.removeClass("unvisible-lines").addClass("second-line");
+        }, 76090);
+        window.setTimeout(function() {
+          ID16.removeClass("second-line").addClass("current-line");
+          ID15.addClass("finished");
+        }, 83330);
+
+        window.setTimeout(function() {
+          ID17.removeClass("unvisible-lines").addClass("second-line");
+        }, 83330);
+        window.setTimeout(function() {
+          ID17.removeClass("second-line").addClass("current-line");
+          ID16.addClass("finished");
+        }, 89770);
+
+        window.setTimeout(function() {
+          ID18.removeClass("unvisible-lines").addClass("second-line");
+        }, 89770);
+        window.setTimeout(function() {
+          ID18.removeClass("second-line").addClass("current-line");
+          ID17.addClass("finished");
+        }, 93380);
+
+        window.setTimeout(function() {
+          ID19.removeClass("unvisible-lines").addClass("second-line");
+        }, 93380);
+        window.setTimeout(function() {
+          ID19.removeClass("second-line").addClass("current-line");
+          ID18.addClass("finished");
+        }, 98120);
+
+        window.setTimeout(function() {
+          ID20.removeClass("unvisible-lines").addClass("second-line");
+        }, 98120);
+        window.setTimeout(function() {
+          ID20.removeClass("second-line").addClass("current-line");
+          ID19.addClass("finished");
+        }, 115560);
+
+        window.setTimeout(function() {
+          ID21.removeClass("unvisible-lines").addClass("second-line");
+        }, 115560);
+        window.setTimeout(function() {
+          ID21.removeClass("second-line").addClass("current-line");
+          ID20.addClass("finished");
+        }, 121930);
+
+        window.setTimeout(function() {
+          ID22.removeClass("unvisible-lines").addClass("second-line");
+        }, 121930);
+        window.setTimeout(function() {
+          ID22.removeClass("second-line").addClass("current-line");
+          ID21.addClass("finished");
+        }, 124920);
+
+        window.setTimeout(function() {
+          ID23.removeClass("unvisible-lines").addClass("second-line");
+        }, 124920);
+        window.setTimeout(function() {
+          ID23.removeClass("second-line").addClass("current-line");
+          ID22.addClass("finished");
+        }, 129110);
+
+        window.setTimeout(function() {
+          ID24.removeClass("unvisible-lines").addClass("second-line");
+        }, 129110);
+        window.setTimeout(function() {
+          ID24.removeClass("second-line").addClass("current-line");
+          ID23.addClass("finished");
+        }, 135470);
+
+        window.setTimeout(function() {
+          ID25.removeClass("unvisible-lines").addClass("second-line");
+        }, 135470);
+        window.setTimeout(function() {
+          ID25.removeClass("second-line").addClass("current-line");
+          ID24.addClass("finished");
+        }, 142700);
+
+        window.setTimeout(function() {
+          ID26.removeClass("unvisible-lines").addClass("second-line");
+        }, 142700);
+        window.setTimeout(function() {
+          ID26.removeClass("second-line").addClass("current-line");
+          ID25.addClass("finished");
+        }, 149540);
+
+        window.setTimeout(function() {
+          ID27.removeClass("unvisible-lines").addClass("second-line");
+        }, 149540);
+        window.setTimeout(function() {
+          ID27.removeClass("second-line").addClass("current-line");
+          ID26.addClass("finished");
+        }, 152710);
+
+        window.setTimeout(function() {
+          ID28.removeClass("unvisible-lines").addClass("second-line");
+        }, 152710);
+        window.setTimeout(function() {
+          ID28.removeClass("second-line").addClass("current-line");
+          ID27.addClass("finished");
+        }, 186700);
+
+        window.setTimeout(function() {
+          ID29.removeClass("unvisible-lines").addClass("second-line");
+        }, 186700);
+        window.setTimeout(function() {
+          ID29.removeClass("second-line").addClass("current-line");
+          ID28.addClass("finished");
+        }, 189560);
+
+        window.setTimeout(function() {
+          ID30.removeClass("unvisible-lines").addClass("second-line");
+        }, 189560);
+        window.setTimeout(function() {
+          ID30.removeClass("second-line").addClass("current-line");
+          ID29.addClass("finished");
+        }, 193170);
+
+        window.setTimeout(function() {
+          ID31.removeClass("unvisible-lines").addClass("second-line");
+        }, 193170);
+        window.setTimeout(function() {
+          ID31.removeClass("second-line").addClass("current-line");
+          ID30.addClass("finished");
+        }, 196720);
+
+        window.setTimeout(function() {
+          ID32.removeClass("unvisible-lines").addClass("second-line");
+        }, 196720);
+        window.setTimeout(function() {
+          ID32.removeClass("second-line").addClass("current-line");
+          ID31.addClass("finished");
+        }, 198310);
+
+        window.setTimeout(function() {
+          ID33.removeClass("unvisible-lines").addClass("second-line");
+        }, 1198310);
+        window.setTimeout(function() {
+          ID33.removeClass("second-line").addClass("current-line");
+          ID32.addClass("finished");
+        }, 199890);
+
+        window.setTimeout(function() {
+          ID34.removeClass("unvisible-lines").addClass("second-line");
+        }, 199890);
+        window.setTimeout(function() {
+          ID34.removeClass("second-line").addClass("current-line");
+          ID33.addClass("finished");
+        }, 201000);
+
+        window.setTimeout(function() {
+          ID35.removeClass("unvisible-lines").addClass("second-line");
+        }, 201000);
+        window.setTimeout(function() {
+          ID35.removeClass("second-line").addClass("current-line");
+          ID34.addClass("finished");
+        }, 203670);
+
+        window.setTimeout(function() {
+          ID36.removeClass("unvisible-lines").addClass("second-line");
+        }, 203670);
+        window.setTimeout(function() {
+          ID36.removeClass("second-line").addClass("current-line");
+          ID35.addClass("finished");
+        }, 206590);
+
+        window.setTimeout(function() {
+          ID37.removeClass("unvisible-lines").addClass("second-line");
+        }, 206590);
+        window.setTimeout(function() {
+          ID37.removeClass("second-line").addClass("current-line");
+          ID36.addClass("finished");
+        }, 209680);
+
+        window.setTimeout(function() {
+          ID38.removeClass("unvisible-lines").addClass("second-line");
+        }, 209680);
+        window.setTimeout(function() {
+          ID38.removeClass("second-line").addClass("current-line");
+          ID37.addClass("finished");
+        }, 214550);
+
+        window.setTimeout(function() {
+          ID39.removeClass("unvisible-lines").addClass("second-line");
+        }, 214550);
+        window.setTimeout(function() {
+          ID39.removeClass("second-line").addClass("current-line");
+          ID38.addClass("finished");
+        }, 217350);
+
+        window.setTimeout(function() {
+          ID40.removeClass("unvisible-lines").addClass("second-line");
+        }, 217350);
+        window.setTimeout(function() {
+          ID40.removeClass("second-line").addClass("current-line");
+          ID39.addClass("finished");
+        }, 221350);
+
+        window.setTimeout(function() {
+          ID41.removeClass("unvisible-lines").addClass("second-line");
+        }, 221350);
+        window.setTimeout(function() {
+          ID41.removeClass("second-line").addClass("current-line");
+          ID40.addClass("finished");
+        }, 224580);
+
+        window.setTimeout(function() {
+          ID42.removeClass("unvisible-lines").addClass("second-line");
+        }, 224580);
+        window.setTimeout(function() {
+          ID42.removeClass("second-line").addClass("current-line");
+          ID41.addClass("finished");
+        }, 226770);
+
+        window.setTimeout(function() {
+          ID43.removeClass("unvisible-lines").addClass("second-line");
+        }, 226770);
+        window.setTimeout(function() {
+          ID43.removeClass("second-line").addClass("current-line");
+          ID42.addClass("finished");
+        }, 229290);
+
+        window.setTimeout(function() {
+          ID44.removeClass("unvisible-lines").addClass("second-line");
+        }, 229290);
+        window.setTimeout(function() {
+          ID44.removeClass("second-line").addClass("current-line");
+          ID43.addClass("finished");
+        }, 230570);
+
+        window.setTimeout(function() {
+          ID45.removeClass("unvisible-lines").addClass("second-line");
+        }, 230570);
+        window.setTimeout(function() {
+          ID45.removeClass("second-line").addClass("current-line");
+          ID44.addClass("finished");
+        }, 232410);
+
+        window.setTimeout(function() {
+          ID46.removeClass("unvisible-lines").addClass("second-line");
+        }, 232410);
+        window.setTimeout(function() {
+          ID46.removeClass("second-line").addClass("current-line");
+          ID45.addClass("finished");
+        }, 234890);
+
+        window.setTimeout(function() {
+          ID47.removeClass("unvisible-lines").addClass("second-line");
+        }, 234890);
+        window.setTimeout(function() {
+          ID47.removeClass("second-line").addClass("current-line");
+          ID46.addClass("finished");
+        }, 238020);
+
+        window.setTimeout(function() {
+          ID48.removeClass("unvisible-lines").addClass("second-line");
+        }, 238020);
+        window.setTimeout(function() {
+          ID48.removeClass("second-line").addClass("current-line");
+          ID47.addClass("finished");
+        }, 242890);
+
+        window.setTimeout(function() {
+          ID49.removeClass("unvisible-lines").addClass("second-line");
+        }, 282890);
+        window.setTimeout(function() {
+          ID49.removeClass("second-line").addClass("current-line");
+          ID48.addClass("finished");
+        }, 244560);
+
+        window.setTimeout(function() {
+          ID50.removeClass("unvisible-lines").addClass("second-line");
+        }, 244560);
+        window.setTimeout(function() {
+          ID50.removeClass("second-line").addClass("current-line");
+          ID49.addClass("finished");
+        }, 255720);
+
+        window.setTimeout(function() {
+          ID51.removeClass("unvisible-lines").addClass("second-line");
+        }, 255720);
+        window.setTimeout(function() {
+          ID51.removeClass("second-line").addClass("current-line");
+          ID50.addClass("finished");
+        }, 261720);
+
+        window.setTimeout(function() {
+          ID52.removeClass("unvisible-lines").addClass("second-line");
+        }, 261720);
+        window.setTimeout(function() {
+          ID52.removeClass("second-line").addClass("current-line");
+          ID51.addClass("finished");
+        }, 266690);
+
+        window.setTimeout(function() {
+          ID53.removeClass("unvisible-lines").addClass("second-line");
+        }, 266690);
+        window.setTimeout(function() {
+          ID53.removeClass("second-line").addClass("current-line");
+          ID52.addClass("finished");
+        }, 273660);
+
+        window.setTimeout(function() {
+          ID54.removeClass("unvisible-lines").addClass("second-line");
+        }, 273660);
+        window.setTimeout(function() {
+          ID54.removeClass("second-line").addClass("current-line");
+          ID53.addClass("finished");
+        }, 296120);
+
+        window.setTimeout(function() {
+          ID55.removeClass("unvisible-lines").addClass("second-line");
+        }, 296120);
+        window.setTimeout(function() {
+          ID55.removeClass("second-line").addClass("current-line");
+          ID54.addClass("finished");
+        }, 315050);
+
+        window.setTimeout(function() {
+          ID56.removeClass("unvisible-lines").addClass("second-line");
+        }, 315050);
+        window.setTimeout(function() {
+          ID56.removeClass("second-line").addClass("current-line");
+          ID55.addClass("finished");
+        }, 316980);
+
+        window.setTimeout(function() {
+          ID57.removeClass("unvisible-lines").addClass("second-line");
+        }, 316980);
+        window.setTimeout(function() {
+          ID57.removeClass("second-line").addClass("current-line");
+          ID56.addClass("finished");
+        }, 320480);
+
+        window.setTimeout(function() {
+          ID58.removeClass("unvisible-lines").addClass("second-line");
+        }, 320480);
+        window.setTimeout(function() {
+          ID58.removeClass("second-line").addClass("current-line");
+          ID57.addClass("finished");
+        }, 344420);
+
+        window.setTimeout(function() {
+          ID58.addClass("finished");
+        }, 350000);
+
+      });
+      lyricsOn.click(function() { 
+        ID1.removeClass("finished current-line").addClass("unvisible-lines");
+        ID2.removeClass("finished current-line").addClass("unvisible-lines");
+        ID3.removeClass("finished current-line").addClass("unvisible-lines");
+        ID4.removeClass("finished current-line").addClass("unvisible-lines");
+        ID5.removeClass("finished current-line").addClass("unvisible-lines");
+        ID6.removeClass("finished current-line").addClass("unvisible-lines");
+        ID7.removeClass("finished current-line").addClass("unvisible-lines");
+        ID8.removeClass("finished current-line").addClass("unvisible-lines");
+      });
+
+      // From here
+
+      lyricsOff.click(function(){
+        lyricsOff.css("display", "none"); // Disparition icone off-mode
+        lyricsOn.css("display", "block"); // Apparition icone on-mode
+        cover.addClass("artwork-fade-out");
+
+        cover.one(transEnd, function() {
+          lyrics.addClass("lyrics-fade-in");
+          cover.removeClass("artwork-fade-in");
+          $( this ).off(transEnd);
+        });
+      });
+      
+
+      lyricsOn.click(function(){
+        lyricsOn.css("display", "none"); // Disparition icone on-mode
+        lyricsOff.css("display", "block"); // Apparition icone off-mode
+        lyrics.addClass("lyrics-fade-out");
+        lyrics.removeClass("lyrics-fade-in");
+        
+        
+        lyrics.one(transEnd, function() {
+          cover.addClass("artwork-fade-in");
+          cover.removeClass("artwork-fade-out");
+          lyrics.removeClass("lyrics-fade-out");
+          $( this ).off(transEnd);
+        });
+      });
+
+      // to here : code to switch from one mode to an other
+      
+
+    });
+</script>
+</body>
+</html>
