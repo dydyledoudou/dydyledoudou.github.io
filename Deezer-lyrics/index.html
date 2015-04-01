@@ -147,15 +147,77 @@
 
       var standardFade = function(firstElement, secondElement, firstTime, secondTime) {
         window.setTimeout(function() {
-          secondElement.removeClass("unvisible-lines").addClass("second-line");
-        }, secondTime);
-        window.setTimeout(function() {
-          secondElement.removeClass("second-line").addClass("current-line");
-          firstElement.addClass("finished");
+          firstElement.removeClass("unvisible-lines").addClass("second-line");
         }, firstTime);
+        window.setTimeout(function() {
+          firstElement.removeClass("second-line").addClass("current-line");
+          secondElement.removeClass("unvisible-lines").addClass("second-line");
+          secondElement.one(transEnd, function () {
+            firstElement.addClass("finished");
+          });
+        }, secondTime);
+        
       }
 
       lyricsOff.click(function() {
+
+        standardFade(ID1, ID2, 0, 400);
+        standardFade(ID2, ID3, 400, 4650);
+        standardFade(ID3, ID4, 4650, 8040);
+        standardFade(ID4, ID5, 8040, 10960);
+        standardFade(ID5, ID6, 10960, 15600);
+        standardFade(ID6, ID7, 15600, 18580);
+        standardFade(ID7, ID8, 18580, 25860);
+        standardFade(ID8, ID9, 25860, 31460);
+        standardFade(ID9, ID10, 31460, 35860);
+        standardFade(ID10, ID11, 35860, 39260);
+        standardFade(ID11, ID12, 39260, 56250);
+        standardFade(ID12, ID13, 56250, 62600);
+        standardFade(ID13, ID14, 62600, 66050);
+        standardFade(ID14, ID15, 66050, 69770);
+        standardFade(ID15, ID16, 69770, 76090);
+        standardFade(ID16, ID17, 76090, 83330);
+        standardFade(ID17, ID18, 83330, 89770);
+        standardFade(ID18, ID19, 89770, 93380);
+        standardFade(ID19, ID20, 93380, 98120);
+        standardFade(ID20, ID21, 98120, 115560);
+        standardFade(ID21, ID22, 115560, 121930);
+        standardFade(ID22, ID23, 121930, 124920);
+        standardFade(ID23, ID24, 124920, 129110);
+        standardFade(ID24, ID25, 129110, 135470);
+        standardFade(ID25, ID26, 135470, 142700);
+        standardFade(ID26, ID27, 142700, 149540);
+        standardFade(ID27, ID28, 149540, 152710);
+        standardFade(ID28, ID29, 152710, 186700);
+        standardFade(ID29, ID30, 186700, 189560);
+        standardFade(ID30, ID31, 189560, 193170);
+        standardFade(ID31, ID32, 193170, 196720);
+        standardFade(ID32, ID33, 196720, 198310);
+        standardFade(ID33, ID34, 198310, 199890);
+        standardFade(ID34, ID35, 199890, 203670);
+        standardFade(ID35, ID36, 203670, 206590);
+        standardFade(ID36, ID37, 206590, 209680);
+        standardFade(ID37, ID38, 209680, 214550);
+        standardFade(ID38, ID39, 214550, 217350);
+        standardFade(ID39, ID40, 217350, 221350);
+        standardFade(ID40, ID41, 221350, 224580);
+        standardFade(ID41, ID42, 224580, 226770);
+        standardFade(ID42, ID43, 226770, 229290);
+        standardFade(ID43, ID44, 229290, 230570);
+        standardFade(ID44, ID45, 230570, 232410);
+        standardFade(ID45, ID46, 232410, 234890);
+        standardFade(ID46, ID47, 234890, 238020);
+        standardFade(ID47, ID48, 238020, 242890);
+        standardFade(ID48, ID49, 242890, 244560);
+        standardFade(ID49, ID50, 244560, 255720);
+        standardFade(ID50, ID51, 255720, 261760);
+        standardFade(ID51, ID52, 261760, 266690);
+        standardFade(ID52, ID53, 266690, 273660);
+        standardFade(ID53, ID54, 273660, 296120);
+        standardFade(ID54, ID55, 296120, 315050);
+        standardFade(ID55, ID56, 315050, 316980);
+        standardFade(ID56, ID57, 316980, 320480);
+        standardFade(ID57, ID58, 320480, 344420);
         // window.setTimeout(function() {
         //   ID1.removeClass("unvisible-lines").addClass("second-line");
         // }, 0);
@@ -170,8 +232,6 @@
         //   ID2.removeClass("second-line").addClass("current-line");
         //   ID1.addClass("finished");
         // }, 4650);
-
-        standardFade(ID1, ID2, 0, 400);
 
         // window.setTimeout(function() {
         //   ID4.removeClass("unvisible-lines").addClass("second-line");
