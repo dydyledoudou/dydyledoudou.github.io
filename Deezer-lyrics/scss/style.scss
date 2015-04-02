@@ -74,7 +74,7 @@ body {
   top: 0 !important;
   position: absolute;
   @include box-sizing(border-box);
-  @include transition(all 2.0s ease-in-out);
+  @include transition(all 1.5s ease-in-out);
   width: 1090px;
   padding: 25px;
   font-size: 50px;
@@ -83,15 +83,15 @@ body {
   // margin: 0 auto 40px;
 
   &.finished{
-  opacity: 0;
-  top: -50px !important;
-  @include transition(all 2.0s ease-in-out);
+    opacity: 0;
+    top: -50px !important;
+    @include transition(all 2.5s ease-in-out);
   }
 }
 
 .second-line {
   opacity: 0.8;
-  @include transition(opacity 2.0s ease-in-out);
+  @include transition(opacity 1.5s ease-in-out);
   font-size: 50px;
   line-height: 50px;
 }
