@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Helvetica Neue', sans-serif; }
   body p {
     color: #ffffff;
@@ -36,7 +38,7 @@ body {
 .lyrics-container {
   position: absolute;
   top: 200px;
-  left: 70px; }
+  left: 64px; }
   .lyrics-container.lyrics-fade-in {
     opacity: 1;
     -webkit-transition: opacity 0.5s ease-out;
@@ -54,9 +56,11 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 1090px;
-  padding: 25px 95px !important;
-  margin: 0 auto; }
+  width: 1152px;
+  margin: 0 auto;
+  padding: 25px;
+  font-size: 50px;
+  line-height: 50px; }
 
 .current-line {
   top: 0 !important;
@@ -67,33 +71,27 @@ body {
   -webkit-transition: all 1.5s ease-in-out;
   -moz-transition: all 1.5s ease-in-out;
   transition: all 1.5s ease-in-out;
-  width: 1090px;
-  padding: 25px;
-  font-size: 50px;
-  line-height: 50px;
   background-color: rgba(25, 144, 219, 0.6); }
   .current-line.finished {
     opacity: 0;
     top: -50px !important;
-    -webkit-transition: all 2.5s ease-in-out;
-    -moz-transition: all 2.5s ease-in-out;
-    transition: all 2.5s ease-in-out; }
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
 
 .second-line {
-  opacity: 0.8;
-  -webkit-transition: opacity 1.5s ease-in-out;
-  -moz-transition: opacity 1.5s ease-in-out;
-  transition: opacity 1.5s ease-in-out;
-  font-size: 50px;
-  line-height: 50px; }
+  opacity: 0.7;
+  -webkit-transition: opacity 2.5s ease-in-out 2s;
+  -moz-transition: opacity 2.5s ease-in-out 2s;
+  transition: opacity 2.5s ease-in-out 2s; }
 
 .unvisible-lines {
   opacity: 0; }
 
 .micro-off, .micro-on {
   position: absolute;
-  top: 644px;
-  left: 947px;
+  top: 634px;
+  left: 937px;
   display: block;
   width: 36px;
   height: 36px; }
