@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="fullplayer">
-    <audio id="song" src="media/song.mp3" type="audio/mp3"></audio> 
+    <audio id="song" src="media/sonug.mp3" type="audio/mp3"></audio> 
     <div class="artwork-container"></div>
     <div class="lyrics-container anim">
 
@@ -99,8 +99,6 @@
             firstElement.addClass("finished");
           });
         }, secondTime);
-
-        
       }
 
       var lyricsArray = [
@@ -163,7 +161,7 @@
         { previousMilliseconds: 320480, milliseconds: 344420, line: "Anyway the wind blows"}
       ];
 
-      lyricsOff.click(function() {
+      lyricsOff.click(function() {  // Fonction to append lyrics in the container
         for (var i=1; i<=58; i++) {
           $( ".lyrics-container" ).append( "<p class='unvisible-lines lyrics-default' id='lyrics-" + i + "' ></p>" );
         }
@@ -173,12 +171,14 @@
           var secondElement = $('#lyrics-' + (index + 2));
           firstElement.text( lyric["line"] );
           standardFade(firstElement, secondElement, lyric["previousMilliseconds"], lyric["milliseconds"]);
+
+           var heightCurrent = $("current-line").height();
+           console.log(heightCurrent);
+
         });
 
-        $('#song').get(0).play();
-
+        $('#song').get(0).play();  // Play the song
       });
-
 
 
       // From here
